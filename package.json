@@ -2,7 +2,7 @@
   "name": "hili-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://philipadeoye.com/tapestry/",
+  "homepage": "https://philipadeoye.com/tapestry",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^4.2.4",

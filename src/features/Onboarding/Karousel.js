@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { dotTheme, ProgressDots } from '../../app/Misc/ProgressDots';
-import { Tasks } from './Tasks';
-import { Welcome } from './Welcome';
-import { YourGoal } from './YourGoal';
-import foods from '../../images/foods_on_wb.png';
-import purple_dumbbells from '../../images/purple_dumbbells.png';
-import frying_pan from '../../images/frying_pan.jpg';
-import fitness_trainer from '../../images/fitness_trainer.svg';
-import team_cheer from '../../images/team_cheer.svg';
-import stack_of_coins from '../../images/stack_of_coins.svg';
-import parisian_storefront from '../../images/parisian_storefront.svg';
-import we_deliver from '../../images/we_deliver.png';
-import karouselStyles from './Karousel.module.css';
-import { KarouselBottomBar } from './AppBars/KarouselBottomBar';
-import { BackButton } from './Buttons/BackButton';
-import { NextButton } from './Buttons/NextButton';
-import { Rewards } from './Rewards';
-import { PlainContainer } from './Containers/PlainContainer';
-import { PatternContainer } from './Containers/PatternContainer';
-import { ChancesToEarn } from './ChancesToEarn';
-import { Completion } from './Completion';
-import { CSSTransition } from 'react-transition-group';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from "react";
+import { Route } from "react-router-dom";
+import { dotTheme, ProgressDots } from "../../app/Misc/ProgressDots";
+import { Tasks } from "./Tasks";
+import { Welcome } from "./Welcome";
+import { YourGoal } from "./YourGoal";
+import foods from "../../images/foods_on_wb.png";
+import purple_dumbbells from "../../images/purple_dumbbells.png";
+import frying_pan from "../../images/frying_pan.jpg";
+import fitness_trainer from "../../images/fitness_trainer.svg";
+import team_cheer from "../../images/team_cheer.svg";
+import stack_of_coins from "../../images/stack_of_coins.svg";
+import parisian_storefront from "../../images/parisian_storefront.svg";
+import we_deliver from "../../images/we_deliver.png";
+import karouselStyles from "./Karousel.module.css";
+import { KarouselBottomBar } from "./AppBars/KarouselBottomBar";
+import { BackButton } from "./Buttons/BackButton";
+import { NextButton } from "./Buttons/NextButton";
+import { Rewards } from "./Rewards";
+import { PlainContainer } from "./Containers/PlainContainer";
+import { PatternContainer } from "./Containers/PatternContainer";
+import { ChancesToEarn } from "./ChancesToEarn";
+import { Completion } from "./Completion";
+import { CSSTransition } from "react-transition-group";
+import { useDispatch, useSelector } from "react-redux";
 import {
   markAppOnboardingAsViewed,
   markFoodOnboardingAsViewed,
   markRewardsOnboardingAsViewed,
-} from '../Shared/metaSlice';
-import { addRewardItemToFeed } from '../Home/feedSlice';
-import { addPoints, updateLifetimePoints } from '../Rewards/rewardsSlice';
+} from "../Shared/metaSlice";
+import { addRewardItemToFeed } from "../Home/feedSlice";
+import { addPoints, updateLifetimePoints } from "../Rewards/rewardsSlice";
 
 export const Karousel = () => {
   const profileImage = useSelector((state) => state.meta.profilePic);
@@ -69,7 +69,7 @@ export const Karousel = () => {
   const [onNextActionCallback, setOnNextActionCallback] = useState([]);
 
   return (
-    <Switch>
+    <>
       {/* Start: New to app Onboarding */}
       <Route
         exact
@@ -90,7 +90,7 @@ export const Karousel = () => {
                     setWelcomeIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/your-goal');
+                        routeProps.history.push("/onboarding/your-goal");
                         setYourGoalIsVisible(true);
                         setWelcomeIsVisible(true);
                       },
@@ -123,7 +123,7 @@ export const Karousel = () => {
                   setYourGoalIsVisible(false);
                   setOnNextActionCallback([
                     () => {
-                      routeProps.history.push('/onboarding/eat-healthy');
+                      routeProps.history.push("/onboarding/eat-healthy");
                       setEatHealthyIsVisible(true);
                       setYourGoalIsVisible(true);
                     },
@@ -166,7 +166,7 @@ export const Karousel = () => {
                     setEatHealthyIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/your-goal');
+                        routeProps.history.push("/onboarding/your-goal");
                         setYourGoalIsVisible(true);
                         setEatHealthyIsVisible(true);
                       },
@@ -180,7 +180,7 @@ export const Karousel = () => {
                     setEatHealthyIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/workout');
+                        routeProps.history.push("/onboarding/workout");
                         setWorkoutIsVisible(true);
                         setEatHealthyIsVisible(true);
                       },
@@ -224,7 +224,7 @@ export const Karousel = () => {
                     setWorkoutIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/eat-healthy');
+                        routeProps.history.push("/onboarding/eat-healthy");
                         setEatHealthyIsVisible(true);
                         setWorkoutIsVisible(true);
                       },
@@ -238,7 +238,7 @@ export const Karousel = () => {
                     setWorkoutIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/hili-coach');
+                        routeProps.history.push("/onboarding/hili-coach");
                         setHiliCoachIsVisible(true);
                         setWorkoutIsVisible(true);
                       },
@@ -288,7 +288,7 @@ export const Karousel = () => {
                     setHiliCoachIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/workout');
+                        routeProps.history.push("/onboarding/workout");
                         setWorkoutIsVisible(true);
                         setHiliCoachIsVisible(true);
                       },
@@ -308,7 +308,7 @@ export const Karousel = () => {
                     // What happens after this screen transitions away
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/cooking-rewards');
+                        routeProps.history.push("/onboarding/cooking-rewards");
                         setCookingRewardsIsVisible(true);
                         setHiliCoachIsVisible(true);
                       },
@@ -361,7 +361,7 @@ export const Karousel = () => {
 
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/hili-coach');
+                        routeProps.history.push("/onboarding/hili-coach");
                         setHiliCoachIsVisible(true);
                         setCookingRewardsIsVisible(true);
                       },
@@ -375,7 +375,7 @@ export const Karousel = () => {
                     setCookingRewardsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/workout-rewards');
+                        routeProps.history.push("/onboarding/workout-rewards");
                         setWorkoutRewardsIsVisible(true);
                         setCookingRewardsIsVisible(true);
                       },
@@ -421,7 +421,7 @@ export const Karousel = () => {
                     setWorkoutRewardsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/cooking-rewards');
+                        routeProps.history.push("/onboarding/cooking-rewards");
                         setCookingRewardsIsVisible(true);
                         setWorkoutRewardsIsVisible(true);
                       },
@@ -435,7 +435,7 @@ export const Karousel = () => {
                     setWorkoutRewardsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/cheer-rewards');
+                        routeProps.history.push("/onboarding/cheer-rewards");
                         setCheerRewardsIsVisible(true);
                         setWorkoutRewardsIsVisible(true);
                       },
@@ -481,7 +481,7 @@ export const Karousel = () => {
                     setCheerRewardsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/workout-rewards');
+                        routeProps.history.push("/onboarding/workout-rewards");
                         setWorkoutRewardsIsVisible(true);
                         setCheerRewardsIsVisible(true);
                       },
@@ -495,7 +495,7 @@ export const Karousel = () => {
                     setCheerRewardsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/chances-to-earn');
+                        routeProps.history.push("/onboarding/chances-to-earn");
                         setChancesToEarnIsVisible(true);
                         setCheerRewardsIsVisible(true);
                       },
@@ -541,7 +541,7 @@ export const Karousel = () => {
                       setChancesToEarnIsVisible(false);
                       setOnNextActionCallback([
                         () => {
-                          routeProps.history.push('/onboarding/cheer-rewards');
+                          routeProps.history.push("/onboarding/cheer-rewards");
                           setCheerRewardsIsVisible(true);
                           setChancesToEarnIsVisible(true);
                         },
@@ -555,7 +555,7 @@ export const Karousel = () => {
                       setChancesToEarnIsVisible(false);
                       setOnNextActionCallback([
                         () => {
-                          routeProps.history.push('/onboarding/completion');
+                          routeProps.history.push("/onboarding/completion");
                           setCompletionIsVisible(true);
                           setChancesToEarnIsVisible(true);
                         },
@@ -591,7 +591,7 @@ export const Karousel = () => {
                     setPlainBgIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/');
+                        routeProps.history.push("/");
                         dispatch(
                           addRewardItemToFeed({
                             points: completionRewardPoints,
@@ -649,7 +649,7 @@ export const Karousel = () => {
                     setCelebrateWinsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/shop-with-points');
+                        routeProps.history.push("/onboarding/shop-with-points");
                         setShopWithPointsIsVisible(true);
                         setCelebrateWinsIsVisible(true);
                       },
@@ -694,7 +694,7 @@ export const Karousel = () => {
                     setShopWithPointsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/celebrate-wins');
+                        routeProps.history.push("/onboarding/celebrate-wins");
                         setCelebrateWinsIsVisible(true);
                         setShopWithPointsIsVisible(true);
                       },
@@ -709,7 +709,7 @@ export const Karousel = () => {
                     setShopWithPointsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/rewards');
+                        routeProps.history.push("/rewards");
                         setCelebrateWinsIsVisible(true);
                         setShopWithPointsIsVisible(true);
                       },
@@ -760,7 +760,7 @@ export const Karousel = () => {
                     setChooseMealsIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/we-deliver');
+                        routeProps.history.push("/onboarding/we-deliver");
                         setWeDeliverIsVisible(true);
                         setChooseMealsIsVisible(true);
                       },
@@ -805,7 +805,7 @@ export const Karousel = () => {
                     setWeDeliverIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/onboarding/choose-meals');
+                        routeProps.history.push("/onboarding/choose-meals");
                         setChooseMealsIsVisible(true);
                         setWeDeliverIsVisible(true);
                       },
@@ -820,7 +820,7 @@ export const Karousel = () => {
                     setWeDeliverIsVisible(false);
                     setOnNextActionCallback([
                       () => {
-                        routeProps.history.push('/food');
+                        routeProps.history.push("/food");
                         setWeDeliverIsVisible(true);
                         setWeDeliverIsVisible(true);
                       },
@@ -833,7 +833,7 @@ export const Karousel = () => {
         )}
       />
       {/* End: Food Onboarding */}
-    </Switch>
+    </>
   );
 };
 
@@ -854,7 +854,7 @@ const Fade = ({
       timeout={{ enter: 200, exit: 400 }}
       classNames={{ ...karouselStyles }}
       onExited={() => {
-        if (onExitedAction && typeof onExitedAction === 'function') {
+        if (onExitedAction && typeof onExitedAction === "function") {
           onExitedAction();
         }
       }}

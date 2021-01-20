@@ -8,9 +8,9 @@ const initialState = {
   hiliCoachImage: "https://i.imgur.com/7ZbKZEn.jpg",
   hiliCoachUserId: 2,
   shouldUseFoodCart: false,
-  hasViewedAppOnboarding: true,
-  hasViewedFoodOnboarding: true,
-  hasViewedRewardsOnboarding: true,
+  hasViewedAppOnboarding: false,
+  hasViewedFoodOnboarding: false,
+  hasViewedRewardsOnboarding: false,
 };
 
 const metaSlice = createSlice({

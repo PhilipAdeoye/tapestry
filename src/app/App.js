@@ -1,26 +1,26 @@
-import React from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import React from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
 
-import { Karousel } from '../features/Onboarding/Karousel';
-import { Modal } from '../features/Modal/Modal';
-import { Home } from '../features/Home/Home';
-import { CareTeam } from '../features/CareTeam/CareTeam';
-import { RewardHub } from '../features/Rewards/RewardHub';
-import { Opportunities } from '../features/Opportunities/Opportunities';
-import { GiftShop } from '../features/GiftShop/GiftShop';
-import { Cart } from '../features/GiftShopCart/Cart';
-import { Wishlist } from '../features/GiftShop/Wishlist';
-import { OrderHistory } from '../features/GiftShop/OrderHistory';
-import { Checkout } from '../features/GiftShop/Checkout';
-import { Activities } from '../features/Activities/Activities';
-import { ChooseFoods } from '../features/Food/ChooseFoods';
-import { PackageView } from '../features/Food/PackageView';
-import { FoodCart } from '../features/FoodCart/FoodCart';
-import { BallotBox } from '../features/FoodVote/BallotBox';
-import { OrderSummary } from '../features/Food/OrderSummary';
-import { useSelector } from 'react-redux';
-import { Demo } from './Demo';
-import { NotFound } from './NotFound';
+import { Karousel } from "../features/Onboarding/Karousel";
+import { Modal } from "../features/Modal/Modal";
+import { Home } from "../features/Home/Home";
+import { CareTeam } from "../features/CareTeam/CareTeam";
+import { RewardHub } from "../features/Rewards/RewardHub";
+import { Opportunities } from "../features/Opportunities/Opportunities";
+import { GiftShop } from "../features/GiftShop/GiftShop";
+import { Cart } from "../features/GiftShopCart/Cart";
+import { Wishlist } from "../features/GiftShop/Wishlist";
+import { OrderHistory } from "../features/GiftShop/OrderHistory";
+import { Checkout } from "../features/GiftShop/Checkout";
+import { Activities } from "../features/Activities/Activities";
+import { ChooseFoods } from "../features/Food/ChooseFoods";
+import { PackageView } from "../features/Food/PackageView";
+import { FoodCart } from "../features/FoodCart/FoodCart";
+import { BallotBox } from "../features/FoodVote/BallotBox";
+import { OrderSummary } from "../features/Food/OrderSummary";
+import { useSelector } from "react-redux";
+import { Demo } from "./Demo";
+import { NotFound } from "./NotFound";
 
 function App() {
   const foodOrderExists = !!useSelector((state) => state.food.order);
@@ -82,11 +82,11 @@ function App() {
           {!shouldViewAppOnboarding && <Home />}
           {shouldViewAppOnboarding && <Redirect to="/onboarding/welcome" />}
         </Route>
+        <Karousel />
         <Route>
           <NotFound />
         </Route>
       </Switch>
-      <Karousel />
       <Modal />
     </>
   );

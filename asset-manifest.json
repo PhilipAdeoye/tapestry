@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tapestry/static/css/main.fbe2e794.chunk.css",
-    "main.js": "/tapestry/static/js/main.62f30dd1.chunk.js",
-    "main.js.map": "/tapestry/static/js/main.62f30dd1.chunk.js.map",
+    "main.js": "/tapestry/static/js/main.cfa430c9.chunk.js",
+    "main.js.map": "/tapestry/static/js/main.cfa430c9.chunk.js.map",
     "runtime-main.js": "/tapestry/static/js/runtime-main.fb8c1dab.js",
     "runtime-main.js.map": "/tapestry/static/js/runtime-main.fb8c1dab.js.map",
     "static/css/2.679831fc.chunk.css": "/tapestry/static/css/2.679831fc.chunk.css",
@@ -57,6 +57,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.79c54a66.chunk.js",
     "static/css/main.fbe2e794.chunk.css",
-    "static/js/main.62f30dd1.chunk.js"
+    "static/js/main.cfa430c9.chunk.js"
   ]
 }

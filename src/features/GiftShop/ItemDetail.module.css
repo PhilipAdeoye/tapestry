@@ -1,0 +1,54 @@
+.container {
+  padding-top: 2rem;
+  font-family: 'Rubik';
+}
+
+.image {
+  border: 2px solid var(--plaster);
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .image {
+    margin: -2rem -1rem 1.5rem -1rem;
+    border: none;
+    border-radius: 0;
+    max-width: 480px;
+    height: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .image {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 359px) {
+  .image {
+    margin: -2rem -1rem 1.5rem -1rem;
+  }
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0 0 1rem 0;
+}
+
+.price {
+  color: var(--deep-blue);
+  background-color: var(--plaster);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+}
+
+.price + .qty_in_cart {
+  margin-left: 1rem;
+}
+
+.action_buttons_wrapper {
+  padding: 2rem 0;
+}

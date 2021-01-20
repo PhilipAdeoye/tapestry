@@ -1,0 +1,47 @@
+.container {
+    padding-bottom: 1rem;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.left_side {
+    flex-shrink: 0;
+    width: 5.5rem;
+    padding: 1.5rem 1rem 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.image_replacement {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--plaster);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--coral);
+}
+
+.right_side {
+    flex-grow: 1;
+    padding: 1.5rem 1rem 1.5rem 0;
+}
+
+.title {
+    font-family: 'Rubik';
+    font-weight: 500;
+}
+
+.wrapper+.wrapper>.right_side {
+    border-top: 2px solid var(--plaster);
+}

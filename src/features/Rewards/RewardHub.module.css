@@ -1,0 +1,58 @@
+.points_display {
+    background-color: var(--plaster);
+    box-shadow: 0 2px 4px 0 var(--coral-shadow);
+    border-radius: 0 0 2rem 2rem;
+    margin: -1rem -1rem 0 -1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.lead {
+    color: var(--grecian-blue);
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+}
+
+.points_to_spend {
+    background-color: var(--deep-blue);
+    min-width: 10rem;
+    color: var(--plaster);
+    font-size: 3rem;
+    line-height: 3.5rem;
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+}
+
+.lifetime_points {
+    background-color: var(--warm-white);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.675rem;
+    color: var(--grecian-blue);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.menu_item {
+    padding-top: 1.5rem;
+}
+
+.menu_wrapper {
+    padding-top: 0.5rem;
+}
+
+@media (max-width: 360px) {
+    .points_display {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+    }
+    .menu_wrapper {
+        padding-top: 0.25rem;
+    }
+    .menu_item {
+        padding-top: 0.75rem;
+    }
+}

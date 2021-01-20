@@ -1,0 +1,65 @@
+.title {
+  font-family: 'Righteous';
+  font-size: 2.5rem;
+  color: var(--deep-blue);
+  margin: 0;
+  text-shadow: 0 3px 6px var(--black-shadow);
+}
+
+.profile_pic {
+  height: 7rem;
+  width: 7rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px 0 var(--coral-shadow);
+  margin: 3.5rem 0 2.5rem 0;
+  animation: floating_serenely infinite 3s ease-in-out;
+}
+
+.heading {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  font-weight: 600;
+  color: var(--deep-blue);
+  font-size: 1.5rem;
+}
+
+.info {
+  margin: 0;
+  font-family: 'Rubik';
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--deep-blue);
+}
+
+.progress_dots_container {
+  padding: 3.5rem 0 3.5rem 0;
+}
+
+@media (max-width: 360px) {
+  .profile_pic {
+    margin: 3rem 0 2rem 0;
+  }
+  .heading {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
+  .info {
+    font-size: 1rem;
+  }
+  .progress_dots_container {
+    padding: 3rem 0 1.5rem 0;
+  }
+}
+
+@keyframes floating_serenely {
+  0% {
+    transform: var(--floating-serenely-0-transform);
+  }
+  50% {
+    transform: var(--floating-serenely-50-transform);
+  }
+  100% {
+    transform: var(--floating-serenely-100-transform);
+  }
+}

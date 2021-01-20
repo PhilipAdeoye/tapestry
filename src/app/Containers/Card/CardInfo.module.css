@@ -1,0 +1,38 @@
+.wrapper {
+    padding: 1rem 1rem 0.25rem 1rem;
+    display: flex;
+}
+
+.info {
+    color: var(--deep-blue);
+    background-color: var(--sunburst-yellow);
+    font-family: 'Rubik';
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon_wrapper {
+    padding-right: 0.5rem;
+}
+
+.icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-bottom: -5px;
+}
+
+.info.animation {
+    animation: bg_color 2s infinite alternate;
+}
+
+@keyframes bg_color {
+    0% {
+        background-color: rgba(250, 224, 168, 0.2);
+    }
+    100% {
+        background-color: var(--sunburst-yellow);
+    }
+}

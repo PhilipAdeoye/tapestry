@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.cash_area, .cart_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Rubik';
+}
+
+.points_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  padding: 0.75rem;
+  line-height: 1.2rem;
+}
+
+.points {
+  font-weight: 500;
+}
+
+.unit {
+  font-size: 0.875rem;
+}

@@ -1,0 +1,30 @@
+.title {
+  font-family: 'Righteous';
+  font-size: 2.5rem;
+  color: var(--deep-blue);
+  max-width: 360px;
+  margin: 0;
+  text-shadow: 0 3px 6px var(--black-shadow);
+}
+
+.big_picture {
+  height: 12.5rem;
+  width: 12.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px 0 var(--coral-shadow);
+  margin: 4rem 0 5rem 0;
+  animation: floating_serenely infinite 3s ease-in-out;
+}
+
+@keyframes floating_serenely {
+  0% {
+    transform: var(--floating-serenely-0-transform);
+  }
+  50% {
+    transform: var(--floating-serenely-50-transform);
+  }
+  100% {
+    transform: var(--floating-serenely-100-transform);
+  }
+}

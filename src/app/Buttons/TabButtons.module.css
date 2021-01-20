@@ -1,0 +1,63 @@
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.container.fixed {
+    position: fixed;
+    top: 5rem;
+    z-index: var(--appbar-z-index);
+}
+
+.wrapper {
+    max-width: 480px;
+}
+
+.content {
+    border: 1px solid var(--deep-blue);
+    background-color: var(--warm-white);
+    border-radius: 1.25rem;
+    font-family: 'Rubik';
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.button {
+    border: none;
+    background-color: var(--warm-white);
+    color: var(--desaturated-deep-blue);
+    font-weight: 500;
+    text-align: center;
+    flex-grow: 1;
+    /* The border on the .content adds an extra 2px to the overall height, which we want to cap at 2.5rem */
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    margin: 0 1px;
+}
+
+.button.active {
+    background-color: var(--deep-blue);
+    color: var(--warm-white);
+    font-weight: 700;
+    box-shadow: 0 2px 4px 0 rgba(33, 136, 189, 0.3);
+    /* Ensures button overlaps the border on .content */
+    margin: 0 -1px;
+}
+
+/* Start Fixes jank */
+
+.button.active:first-of-type {
+    margin-right: 1px;
+}
+
+.button.active:last-of-type {
+    margin-left: 1px;
+}
+
+/* End Fixes jank */
+
+.button:active {
+    transform: none;
+}

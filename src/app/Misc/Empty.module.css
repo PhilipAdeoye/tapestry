@@ -1,0 +1,13 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.info {
+  padding: 4rem 0 5rem 0;
+  max-width: 16rem;
+  text-align: center;
+}

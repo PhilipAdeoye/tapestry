@@ -1,0 +1,26 @@
+.button {
+    border-radius: 0.5rem;
+    border: 1px solid var(--coral);
+    background-color: var(--plaster);
+    height: 2.5rem;
+    font-family: 'Rubik';
+    font-weight: 500;
+    color: var(--deep-blue);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.text {
+    padding-left: 0.5rem;
+    padding-right: 0.75rem;
+}
+
+@media (max-width: 480px) {
+    .button.shrink {
+        padding: 0 0.75rem;
+    }
+    .text.hidden {
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+.container {
+  height: 100%;
+
+  max-width: 360px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  color: var(--deep-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background-color: var(--plaster);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 12rem;
+}
+
+.title {
+  padding-top: 2rem;
+  font-weight: 500;
+  font-size: 1.75rem;
+  font-family: 'Rubik';
+}
+.message {
+  padding: 1rem 0;
+  width: 16rem;
+}
+
+.button_section {
+  width: 100%;
+  text-align: right;
+  padding-top: 1.5rem;
+}
+
+/* Specifically targeting iPhone 5/SE with screen width of 320px */
+@media (max-width: 359px) {
+  .container {
+    padding-top: 2rem;
+  }
+  .background {
+    height: 11rem;
+    width: 11rem;
+  }
+  .title {
+    padding-top: 1.5rem;
+  }
+  .message {
+    padding-top: 0.5rem;
+  }
+  .button_section {
+    padding-top: 1rem;
+  }
+}

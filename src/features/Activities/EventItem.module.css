@@ -1,0 +1,48 @@
+.wrapper {
+    padding-top: 1rem;
+    transition: height 250ms;
+}
+
+.content {
+    padding: 1rem;
+    display: flex;
+}
+
+.left_side {
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.rewards_wrapper {
+    padding: 1rem 0;
+}
+
+.right_side {
+    font-family: 'Rubik';
+}
+
+.title {
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+.detail {
+    padding-top: 0.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.detail_text {
+    padding-left: 0.5rem;
+}
+
+.icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.icon.coral {
+    color: var(--coral);
+}

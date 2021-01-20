@@ -1,0 +1,17 @@
+.footer {
+  background: var(--warm-white);
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: 0 -2px 4px 0 var(--coral-shadow);
+  z-index: var(--appbar-z-index);
+}
+
+.footer__content {
+  margin: 0 auto;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

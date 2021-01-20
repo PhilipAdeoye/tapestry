@@ -1,0 +1,22 @@
+.wrapper {
+    margin-bottom: 1rem;
+    font-family: 'Rubik';
+    font-weight: 500;
+}
+
+.wrapper.plaster {
+    padding-top: 1rem;
+    padding-bottom: 0.5em;
+}
+
+.label.coral {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--coral);
+}
+
+.label.plaster {
+    padding: 0.5rem 1rem;
+    background-color: var(--plaster);
+    border-radius: 0.5rem;
+    display: inline-block;
+}

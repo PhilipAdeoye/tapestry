@@ -1,0 +1,38 @@
+.container {
+  height: 100%;
+
+  width: 16rem;
+  margin: 0 auto;
+  padding-top: 3rem;
+  font-family: 'Rubik';
+  color: var(--deep-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background-color: var(--plaster);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 10rem;
+}
+
+.message {
+  padding: 2rem 0;
+  width: 16rem;
+}
+
+.button_section {
+  width: 100%;
+}

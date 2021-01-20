@@ -1,0 +1,9 @@
+.package_heading_wrapper {
+  padding: 2rem 0 1.75rem 0.5rem;
+}
+
+@media (max-width: 360px) {
+  .package_heading_wrapper {
+    padding-left: 0;
+  }
+}

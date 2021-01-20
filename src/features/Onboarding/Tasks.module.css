@@ -1,0 +1,40 @@
+.big_picture {
+  height: 12.5rem;
+  width: 12.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px 0 var(--coral-shadow);
+  margin: 6rem 0 3rem 0;
+  animation: floating_serenely infinite 3s ease-in-out;
+}
+
+.info {
+  font-weight: 400;
+  color: var(--deep-blue);
+  font-size: 1.5rem;
+  margin: 0;
+  max-width: 240px;
+  text-align: center;
+}
+
+.progress_dots_container {
+  padding: 3.5rem 0 3.5rem 0;
+}
+
+@media (max-width: 360px) {
+  .info {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes floating_serenely {
+  0% {
+    transform: var(--floating-serenely-0-transform);
+  }
+  50% {
+    transform: var(--floating-serenely-50-transform);
+  }
+  100% {
+    transform: var(--floating-serenely-100-transform);
+  }
+}

@@ -1,0 +1,22 @@
+.sunburst {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-image: url(../../images/sunburst.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floating_serenely infinite 3s ease-in-out;
+}
+
+@keyframes floating_serenely {
+    0% {
+        transform: var(--floating-serenely-0-transform);
+    }
+    50% {
+        transform: var(--floating-serenely-50-transform);
+    }
+    100% {
+        transform: var(--floating-serenely-100-transform);
+    }
+}

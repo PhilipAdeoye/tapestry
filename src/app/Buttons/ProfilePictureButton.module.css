@@ -1,0 +1,12 @@
+.picture_button {
+  border: 1px solid var(--deep-blue);
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.picture_button:active {
+  transform: var(--pop-factor);
+}

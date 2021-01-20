@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+
+  max-width: 360px;
+  margin: 0 auto;
+  padding-top: 3rem;
+  font-family: 'Rubik';
+  color: var(--deep-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.message {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.button_section {
+  padding: 2rem 0;
+  width: 5rem;
+}
+
+.confirm {
+  width: 100%;
+  text-align: right;
+}

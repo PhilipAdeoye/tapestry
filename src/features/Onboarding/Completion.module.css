@@ -1,0 +1,79 @@
+.title {
+  font-family: 'Rubik';
+  color: var(--grecian-blue);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.sunburst_wrapper {
+  width: 200px;
+  height: 200px;
+  margin: 3rem 0 2.5rem 0;
+}
+
+.sunburst_points {
+  font-family: 'Righteous';
+  font-size: 1.875rem;
+  color: var(--coral);
+}
+
+.info_grid {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.rewards_info {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+}
+
+.reward_points {
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid var(--coral);
+  background-color: var(--sunburst-yellow);
+  border-radius: 1rem;
+  text-align: center;
+  font-family: 'Rubik';
+  font-weight: 500;
+  color: var(--coral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  padding-left: 1rem;
+  text-align: left;
+  color: var(--grecian-blue);
+  max-width: 180px;
+}
+
+.giftshop_info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.storefront_wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.storefront {
+  width: 3.5rem;
+}
+
+@media (max-width: 360px) {
+  .sunburst_wrapper {
+    width: 9rem;
+    height: 9rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+  .info_grid {
+    padding-bottom: 2rem;
+  }
+}

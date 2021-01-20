@@ -1,0 +1,50 @@
+.wrapper {
+    border-top: 2px solid var(--plaster);
+    display: flex;
+}
+
+.button {
+    flex-grow: 1;
+    height: 3rem;
+    background-color: var(--warm-white);
+    border: none;
+    color: var(--deep-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Rubik;
+    font-weight: 400;
+}
+
+.button:active {
+    background-color: var(--plaster);
+}
+
+.button:first-of-type {
+    border-bottom-left-radius: 1rem;
+}
+
+.button:last-of-type {
+    border-bottom-right-radius: 1rem;
+}
+
+.button.highlighted {
+    background-color: var(--plaster);
+}
+
+.button+.button {
+    border-left: 2px solid var(--plaster);
+}
+
+.icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.icon.coral_icon {
+    color: var(--coral);
+}
+
+.text {
+    padding-left: 0.5rem;
+}

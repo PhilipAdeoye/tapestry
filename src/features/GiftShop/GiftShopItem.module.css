@@ -1,0 +1,137 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 14rem;
+}
+
+.item {
+  height: 14rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px 0 var(--coral-shadow);
+  transition: height 250ms;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  font-family: 'Rubik';
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--warm-white);
+}
+
+/* Start item themes */
+
+.item.plaster {
+  background-color: var(--plaster);
+  color: var(--deep-blue);
+}
+
+.item.sunburst {
+  background-color: var(--sunburst-yellow);
+  color: var(--deep-blue);
+}
+
+.item.deep_blue {
+  background-color: var(--deep-blue);
+  color: var(--warm-white);
+}
+
+.item.coral {
+  background-color: var(--coral);
+  color: var(--deep-blue);
+}
+
+/* End item themes */
+
+.item__open {
+  height: 9rem;
+}
+
+.image {
+  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.wishlist_indicator {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  color: var(--coral);
+}
+
+.item.coral .wishlist_indicator {
+  color: var(--warm-white);
+}
+
+.backdrop {
+  border-radius: 0 0 1rem 1rem;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(255, 255, 255, 0)
+  );
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 0.75rem;
+}
+
+.item.plaster .backdrop,
+.item.sunburst .backdrop,
+.item.deep_blue .backdrop,
+.item.coral .backdrop {
+  background-image: none;
+}
+
+.item.coral .backdrop {
+  border-radius: 1rem;
+  background-color: var(--sunburst-yellow);
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+.price {
+  color: var(--deep-blue);
+  background-color: var(--warm-white);
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.item.plaster .price {
+  background-color: var(--grecian-blue);
+  color: var(--warm-white);
+}
+.item.deep_blue .price {
+  background-color: var(--sunburst-yellow);
+}
+
+.icon {
+  margin-right: 2px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cart_qty {
+  display: flex;
+  align-items: center;
+}
+
+.controls__open {
+  border-radius: 1rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.controls__closed {
+  display: none;
+}

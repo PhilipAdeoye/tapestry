@@ -1,0 +1,93 @@
+.fz14 {
+    font-size: 14px;
+}
+
+.fz16 {
+    font-size: 16px;
+}
+
+.fz18 {
+    font-size: 18px;
+}
+
+.fz20 {
+    font-size: 20px;
+}
+
+.fz24 {
+    font-size: 24px;
+}
+
+.fz28 {
+    font-size: 28px;
+}
+
+.fz32 {
+    font-size: 32px;
+}
+
+.fz40 {
+    font-size: 40px;
+}
+
+.fz48 {
+    font-size: 48px;
+}
+
+.fz56 {
+    font-size: 56px;
+}
+
+.fz64 {
+    font-size: 64px;
+}
+
+/* Font weight utility classes */
+
+.regular {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* Font families */
+
+.rubik {
+    font-family: 'Rubik';
+}
+
+.nunito {
+    font-family: 'Nunito';
+}
+
+.righteous {
+    font-family: 'Righteous';
+}
+
+/* Font colors */
+
+.deep_blue {
+    color: var(--deep-blue);
+}
+
+.grecian_blue {
+    color: var(--grecian-blue);
+}
+
+.coral {
+    color: var(--coral);
+}
+
+.plaster {
+    color: var(--plaster);
+}

@@ -1,0 +1,24 @@
+.details {
+    padding: 1rem;
+    display: flex;
+}
+
+.texts {
+    color: var(--deep-blue);
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.name {
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.role {
+    font-family: 'Nunito';
+    font-weight: 400;
+    font-size: 1rem;
+}

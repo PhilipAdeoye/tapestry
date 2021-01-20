@@ -1,0 +1,23 @@
+.btn {
+  text-align: center;
+  font-family: 'Nunito';
+  font-weight: 600;
+  height: 2rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 1px solid var(--deep-blue);
+  color: var(--deep-blue);
+}
+
+.btn:active {
+  transform: var(--pop-factor);
+}
+
+.btn_default {
+  background-color: var(--warm-white);
+}
+
+.btn_primary {
+  background-color: var(--plaster);
+}

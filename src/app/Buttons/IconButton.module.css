@@ -1,0 +1,39 @@
+.icon_btn {
+  padding: 0;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--deep-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--plaster);
+  box-shadow: 0 2px 4px 0 var(--coral-shadow);
+}
+
+.icon_btn.plaster {
+  color: var(--deep-blue);
+  background-color: var(--plaster);
+}
+
+.icon_btn.coral_outlined {
+  height: 2rem;
+  width: 2rem;
+  color: var(--coral);
+  border: 1px solid var(--coral);
+  background-color: var(--plaster);
+  box-shadow: none;
+}
+
+.icon_btn:disabled {
+  background-color: var(--disabled-grey);
+  color: gray;
+  cursor: not-allowed;
+  box-shadow: 0 2px 4px 0 rgba(128, 128, 128, 0.6);
+}
+
+.icon_btn__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}

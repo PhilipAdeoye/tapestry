@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.package_label {
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin-bottom: -0.25rem;
+}
+
+.sponsor_image {
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.sponsor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+    font-family: 'Rubik';
+}

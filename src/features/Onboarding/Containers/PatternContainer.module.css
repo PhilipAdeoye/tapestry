@@ -1,0 +1,14 @@
+.background {
+  background-image: url('../../../images/onboarding_bg.svg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

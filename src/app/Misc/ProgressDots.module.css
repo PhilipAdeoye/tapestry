@@ -1,0 +1,23 @@
+.dot {
+  display: inline-block;
+  border-radius: 50%;
+  height: 0.5rem;
+  width: 0.5rem;
+  border: 1px solid var(--deep-blue);
+}
+
+.dot+.dot {
+  margin-left: 0.5rem;
+}
+
+.grecian_blue {
+  border-color: var(--grecian-blue);
+}
+
+.current {
+  background-color: var(--deep-blue);
+}
+
+.current.grecian_blue {
+  background-color: var(--grecian-blue);
+}

@@ -1,0 +1,86 @@
+/* Icon Text Buttons */
+
+.icon_text_btn {
+  text-align: center;
+  font-family: 'Nunito';
+  font-weight: 600;
+  padding: 0;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--deep-blue);
+  color: var(--deep-blue);
+}
+
+.icon_text_btn:active {
+  transform: var(--pop-factor);
+}
+
+.icon_text_btn.large {
+  height: 3rem;
+  border-radius: 1.5rem;
+}
+
+/* Apply default button colors */
+
+.icon_text_btn.default {
+  background-color: var(--warm-white);
+}
+
+.icon_text_btn.primary {
+  background-color: var(--plaster);
+}
+
+/* Style the contents: Flexbox */
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content.icon_right {
+  flex-direction: row-reverse;
+}
+
+/* Style the icon */
+
+.icon {
+  margin-top: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.icon.with_bg {
+  color: var(--plaster);
+  background-color: var(--deep-blue);
+}
+
+.icon.large {
+  height: 3rem;
+  width: 3rem;
+}
+
+/* Style the text */
+
+.text {
+  padding: 0 1.2rem 2px 0.5rem;
+  margin: 0 auto;
+}
+
+.text.large {
+  padding-right: 2px;
+  padding-left: 2.5rem;
+}
+
+.text.icon_right {
+  padding-right: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.text.icon_right.large {
+  padding-right: 2.5rem;
+  padding-left: 4.5rem;
+}

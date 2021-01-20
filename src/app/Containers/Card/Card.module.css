@@ -1,0 +1,33 @@
+.background {
+  background-color: var(--warm-white);
+  box-shadow: 0 3px 6px 0 var(--coral-shadow);
+  border-radius: 1rem;
+}
+
+.image {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.illustration {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: var(--plaster);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--coral);
+}
+
+.illustration__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+hr.divider {
+  /* hr elements are made up of 1 border-top and 1 border-bottom */
+  border: 1px solid var(--plaster);
+}

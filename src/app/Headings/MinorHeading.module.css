@@ -1,0 +1,21 @@
+.text {
+  font-family: 'Rubik';
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.bold {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.orange {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.2rem;
+  background-color: var(--coral);
+  box-shadow: 0 1px 4px 0 var(--coral-shadow);
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}

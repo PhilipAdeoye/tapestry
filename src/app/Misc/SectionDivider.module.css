@@ -1,0 +1,6 @@
+.section_divider {
+  width: 100px;
+  height: 8px;
+  background-color: var(--coral);
+  border-radius: 4px;
+}

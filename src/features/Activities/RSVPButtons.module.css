@@ -1,0 +1,54 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons_area {
+    display: flex;
+    border-top: 2px solid var(--plaster);
+}
+
+.button {
+    flex-grow: 1;
+    flex-basis: 33.33%;
+    height: 3rem;
+    background-color: var(--warm-white);
+    border: none;
+    color: var(--deep-blue);
+    font-family: Rubik;
+    font-weight: 400;
+}
+
+.button:first-of-type {
+    border-bottom-left-radius: 1rem;
+}
+
+.button:last-of-type {
+    border-bottom-right-radius: 1rem;
+}
+
+.button.selected {
+    background-color: var(--plaster);
+    font-weight: 500;
+}
+
+.button.flat_bottom {
+    border-radius: 0;
+}
+
+.button+.button {
+    border-left: 2px solid var(--plaster);
+}
+
+.join_options_area {
+    border-top: 2px solid var(--plaster);
+    padding: 1rem 0.5rem 1rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 360px) {
+    .join_options_area {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+}

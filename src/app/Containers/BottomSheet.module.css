@@ -1,0 +1,25 @@
+.background {
+  flex-grow: 1;
+  background-color: var(--warm-white);
+  border-radius: 1rem 1rem 0 0;
+  padding: 0 1.75rem 5rem 1.75rem;
+  box-shadow: 0 3px 6px 0 var(--coral-shadow);
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.heading {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--coral);
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+/* 360 px and lower */
+@media (max-width: 360px) {
+  .background {
+    padding: 0 1rem 5rem 1rem;
+  }
+}

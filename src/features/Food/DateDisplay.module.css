@@ -1,0 +1,51 @@
+.background {
+    color: var(--plaster);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 1rem;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rubik';
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+    font-weight: 500;
+    justify-content: space-evenly;
+}
+
+.background.coral {
+    background-color: var(--coral);
+}
+
+.background.grecian_blue {
+    background-color: var(--grecian-blue);
+}
+
+.holes {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+}
+
+.hole {
+    display: inline-block;
+    background-color: var(--plaster);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+}
+
+.month {
+    line-height: 1rem;
+}
+
+.day {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}

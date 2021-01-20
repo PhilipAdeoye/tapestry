@@ -14,7 +14,7 @@ import ScrollToTop from "./app/ScrollToTop";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <HashRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <ScrollToTop />
         <App />
       </HashRouter>

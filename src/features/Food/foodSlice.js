@@ -1,12 +1,12 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { format, addDays, startOfToday } from 'date-fns';
-import { getInclusiveRandomInteger } from '../../utils';
+import { createSlice } from "@reduxjs/toolkit";
+import { format, addDays, startOfToday } from "date-fns";
+import { getInclusiveRandomInteger } from "../../utils";
 
 // Initial State
 const initialState = {
-  orderWillBePlacedOn: format(addDays(startOfToday(), 3), 'yyyy/MM/dd'),
-  orderTime: '12:00 PM',
-  itemsWillBeDeliveredOn: format(addDays(startOfToday(), 6), 'yyyy/MM/dd'),
+  orderWillBePlacedOn: format(addDays(startOfToday(), 3), "yyyy/MM/dd"),
+  orderTime: "12:00 PM",
+  itemsWillBeDeliveredOn: format(addDays(startOfToday(), 6), "yyyy/MM/dd"),
   currentOrderSequence: 1,
   isSkippingOrder: false,
   referenceOrder: {
@@ -30,60 +30,60 @@ const initialState = {
   // },
   package: {
     id: 1,
-    label: 'Starter Package',
-    sponsoredByCoachName: 'Coach Maddie',
-    sponsoredByCoachImage: 'https://i.imgur.com/XIZFCfX.png',
+    label: "Starter Package",
+    sponsoredByCoachName: "Coach Liz",
+    sponsoredByCoachImage: "https://i.imgur.com/7ZbKZEn.jpg",
     items: [
       // Meals
       {
         id: 1,
-        name: 'BBQ',
-        type: 'Meal',
-        image: 'https://i.imgur.com/KY8tkeQ.jpg',
+        name: "BBQ",
+        type: "Meal",
+        image: "https://i.imgur.com/KY8tkeQ.jpg",
         count: 2,
       },
       {
         id: 2,
-        name: 'Fruit Salad',
-        type: 'Meal',
-        image: 'https://i.imgur.com/gVWtQ4s.jpg',
+        name: "Fruit Salad",
+        type: "Meal",
+        image: "https://i.imgur.com/gVWtQ4s.jpg",
         count: 2,
       },
       {
         id: 3,
-        name: 'Whole Wheat Spaghetti with Ground Turkey',
-        type: 'Meal',
-        image: 'https://i.imgur.com/y7ki2gm.jpg',
+        name: "Whole Wheat Spaghetti with Ground Turkey",
+        type: "Meal",
+        image: "https://i.imgur.com/y7ki2gm.jpg",
         count: 3,
       },
       {
         id: 4,
-        name: 'Steak and Fruit',
-        type: 'Meal',
-        image: 'https://i.imgur.com/3VW06Un.jpg',
+        name: "Steak and Fruit",
+        type: "Meal",
+        image: "https://i.imgur.com/3VW06Un.jpg",
         count: 1,
       },
       {
         id: 6,
-        name: 'Salmon Slabs',
-        type: 'Meal',
-        image: 'https://i.imgur.com/Iji3kXo.jpg',
+        name: "Salmon Slabs",
+        type: "Meal",
+        image: "https://i.imgur.com/Iji3kXo.jpg",
         count: 1,
       },
       {
         id: 7,
-        name: 'Meat and Potatoes',
-        type: 'Meal',
-        image: 'https://i.imgur.com/IcoyGGp.jpg',
+        name: "Meat and Potatoes",
+        type: "Meal",
+        image: "https://i.imgur.com/IcoyGGp.jpg",
         count: 1,
       },
 
       // Snacks
       {
         id: 5,
-        name: 'Fresh Blueberries',
-        type: 'Snack',
-        image: 'https://i.imgur.com/U1xgVIX.jpg',
+        name: "Fresh Blueberries",
+        type: "Snack",
+        image: "https://i.imgur.com/U1xgVIX.jpg",
         count: 5,
       },
     ],
@@ -92,7 +92,7 @@ const initialState = {
 
 // Slice of state and reducers
 const foodSlice = createSlice({
-  name: 'food',
+  name: "food",
   initialState,
   reducers: {
     skipOrder(state) {

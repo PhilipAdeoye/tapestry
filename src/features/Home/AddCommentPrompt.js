@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { MdChevronRight } from 'react-icons/md';
-import { useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { MdChevronRight } from "react-icons/md";
+import { useDispatch } from "react-redux";
 import {
   buttonKind,
   iconPosition,
   IconTextButton,
-} from '../../app/Buttons/IconTextButton';
-import { StackedButtons } from '../../app/Buttons/StackedButtons';
-import { hide } from '../Modal/modalSlice';
-import styles from './AddCommentPrompt.module.css';
-import { addComment } from './feedSlice';
+} from "../../app/Buttons/IconTextButton";
+import { StackedButtons } from "../../app/Buttons/StackedButtons";
+import { hideModal } from "../Modal/modalSlice";
+import styles from "./AddCommentPrompt.module.css";
+import { addComment } from "./feedSlice";
 
 /**
  *
@@ -32,7 +32,7 @@ export const AddCommentPrompt = ({
 }) => {
   const dispatch = useDispatch();
   //   Keep track of the user's selection
-  const [choice, setChoice] = useState('');
+  const [choice, setChoice] = useState("");
 
   const options = cannedComments.map((comment) => {
     return {
@@ -56,7 +56,7 @@ export const AddCommentPrompt = ({
           text: choice,
         })
       );
-      dispatch(hide());
+      dispatch(hideModal());
     }
   };
 
@@ -65,7 +65,7 @@ export const AddCommentPrompt = ({
       <div>{item}</div>
       {item && (
         <hr
-          style={{ border: '0.5px solid var(--coral', margin: '1rem 0 0 0' }}
+          style={{ border: "0.5px solid var(--coral", margin: "1rem 0 0 0" }}
         />
       )}
 
@@ -84,7 +84,7 @@ export const AddCommentPrompt = ({
         {!!choice && (
           <IconTextButton
             icon={<MdChevronRight />}
-            label={'COMMENT'}
+            label={"COMMENT"}
             position={iconPosition.right}
             kind={buttonKind.primary}
             action={handleConfirmBtnClick}

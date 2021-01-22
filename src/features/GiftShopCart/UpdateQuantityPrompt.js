@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { MdChevronRight } from 'react-icons/md';
-import { useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { MdChevronRight } from "react-icons/md";
+import { useDispatch } from "react-redux";
 import {
   buttonKind,
   iconPosition,
   IconTextButton,
-} from '../../app/Buttons/IconTextButton';
-import { StackedButtons } from '../../app/Buttons/StackedButtons';
-import { createInclusiveRange, getInclusiveRandomInteger } from '../../utils';
-import { hide } from '../Modal/modalSlice';
-import { addPoints, subtractPoints } from '../Rewards/rewardsSlice';
-import { addToCart, removeAllWithItemId } from './cartSlice';
-import styles from './UpdateQuantityPrompt.module.css';
+} from "../../app/Buttons/IconTextButton";
+import { StackedButtons } from "../../app/Buttons/StackedButtons";
+import { createInclusiveRange, getInclusiveRandomInteger } from "../../utils";
+import { hideModal } from "../Modal/modalSlice";
+import { addPoints, subtractPoints } from "../Rewards/rewardsSlice";
+import { addToCart, removeAllWithItemId } from "./cartSlice";
+import styles from "./UpdateQuantityPrompt.module.css";
 
 export const UpdateQuantityPrompt = ({ item, initialQty, maxQty }) => {
   const MAX_NUMBER_OF_BUTTONS = 5;
@@ -71,7 +71,7 @@ export const UpdateQuantityPrompt = ({ item, initialQty, maxQty }) => {
         dispatch(subtractPoints(item.price));
       }
     }
-    dispatch(hide());
+    dispatch(hideModal());
   };
 
   return (
@@ -83,7 +83,7 @@ export const UpdateQuantityPrompt = ({ item, initialQty, maxQty }) => {
       <p className={styles.confirm}>
         <IconTextButton
           icon={<MdChevronRight />}
-          label={'OK'}
+          label={"OK"}
           position={iconPosition.right}
           kind={buttonKind.primary}
           action={handleConfirmBtnClick}

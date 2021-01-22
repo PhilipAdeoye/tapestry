@@ -1,12 +1,12 @@
-import React from 'react';
-import { MdClose } from 'react-icons/md';
-import { useDispatch } from 'react-redux';
+import React from "react";
+import { MdClose } from "react-icons/md";
+import { useDispatch } from "react-redux";
 import {
   buttonKind,
   iconPosition,
   IconTextButton,
-} from '../../app/Buttons/IconTextButton';
-import { hide } from './modalSlice';
+} from "../../app/Buttons/IconTextButton";
+import { hideModal } from "./modalSlice";
 
 export const ModalCloseButton = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export const ModalCloseButton = () => {
       position={iconPosition.left}
       kind={buttonKind.default}
       action={() => {
-        dispatch(hide());
+        dispatch(hideModal());
       }}
     />
   );

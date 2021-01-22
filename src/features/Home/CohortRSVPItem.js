@@ -1,21 +1,21 @@
-import React from 'react';
-import { Card, CardImage } from '../../app/Containers/Card/Card';
-import { CardComments } from '../../app/Containers/Card/CardComments';
-import feedItemStyles from './FeedItem.module.css';
-import classnames from 'classnames';
-import { useDispatch, useSelector } from 'react-redux';
-import { IconContext } from 'react-icons/lib';
-import { MdAccessTime, MdModeComment, MdThumbUp } from 'react-icons/md';
-import { format } from 'date-fns';
-import { Badge, badgeThemes } from '../../app/Misc/Badge';
-import { toggleCohortItemLike, cannedComments } from './feedSlice';
-import { RiThumbUpLine } from 'react-icons/ri';
-import { BiComment } from 'react-icons/bi';
-import { CardActionButtonGroup } from '../../app/Buttons/CardActionButtonGroup';
-import { show } from '../Modal/modalSlice';
-import { LikesView } from './LikesView';
-import { BriefRSVP } from './ItemBrief/BriefRSVP';
-import { AddCommentPrompt } from './AddCommentPrompt';
+import React from "react";
+import { Card, CardImage } from "../../app/Containers/Card/Card";
+import { CardComments } from "../../app/Containers/Card/CardComments";
+import feedItemStyles from "./FeedItem.module.css";
+import classnames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { IconContext } from "react-icons/lib";
+import { MdAccessTime, MdModeComment, MdThumbUp } from "react-icons/md";
+import { format } from "date-fns";
+import { Badge, badgeThemes } from "../../app/Misc/Badge";
+import { toggleCohortItemLike, cannedComments } from "./feedSlice";
+import { RiThumbUpLine } from "react-icons/ri";
+import { BiComment } from "react-icons/bi";
+import { CardActionButtonGroup } from "../../app/Buttons/CardActionButtonGroup";
+import { showModal } from "../Modal/modalSlice";
+import { LikesView } from "./LikesView";
+import { BriefRSVP } from "./ItemBrief/BriefRSVP";
+import { AddCommentPrompt } from "./AddCommentPrompt";
 
 export const CohortRSVPItem = ({
   id,
@@ -64,10 +64,10 @@ export const CohortRSVPItem = ({
         </div>
 
         <div className={feedItemStyles.right_side}>
-          <p className={classnames(feedItemStyles.text, 'nunito')}>
+          <p className={classnames(feedItemStyles.text, "nunito")}>
             {userName} is going to
           </p>
-          <p className={classnames(feedItemStyles.text, 'rubik', 'medium')}>
+          <p className={classnames(feedItemStyles.text, "rubik", "medium")}>
             {event.title}
           </p>
 
@@ -77,7 +77,7 @@ export const CohortRSVPItem = ({
               <MdAccessTime />
             </IconContext.Provider>
             <span className={feedItemStyles.detail_text}>
-              {format(Date.parse(event.startsAt), 'MMM d, h:mm a')}
+              {format(Date.parse(event.startsAt), "MMM d, h:mm a")}
             </span>
           </div>
 
@@ -88,7 +88,7 @@ export const CohortRSVPItem = ({
               className={feedItemStyles.detail_button}
               onClick={() =>
                 dispatch(
-                  show({
+                  showModal({
                     content: (
                       <LikesView
                         likedItem={
@@ -102,7 +102,7 @@ export const CohortRSVPItem = ({
                           return {
                             name:
                               l.userName === currentUser.userName
-                                ? 'You'
+                                ? "You"
                                 : l.userName,
                             image: l.imageURL,
                           };
@@ -125,7 +125,7 @@ export const CohortRSVPItem = ({
               </IconContext.Provider>
               <span className={feedItemStyles.detail_text}>
                 {`${likes.length} ${
-                  likes.length === 1 ? 'person likes' : 'people like'
+                  likes.length === 1 ? "person likes" : "people like"
                 } this`}
               </span>
             </button>
@@ -135,7 +135,7 @@ export const CohortRSVPItem = ({
           {comments.length > 0 && (
             <div
               className={feedItemStyles.detail}
-              style={{ paddingTop: '0.1rem' }}
+              style={{ paddingTop: "0.1rem" }}
             >
               <IconContext.Provider
                 value={{
@@ -149,7 +149,7 @@ export const CohortRSVPItem = ({
               </IconContext.Provider>
               <span className={feedItemStyles.detail_text}>
                 {`${comments.length} ${
-                  comments.length === 1 ? 'comment' : 'comments'
+                  comments.length === 1 ? "comment" : "comments"
                 }`}
               </span>
             </div>
@@ -181,18 +181,18 @@ export const CohortRSVPItem = ({
       <CardActionButtonGroup
         items={[
           {
-            text: isLikedByUser ? 'You like this' : 'Like',
+            text: isLikedByUser ? "You like this" : "Like",
             isHighlighted: isLikedByUser,
             useCoralIcon: isLikedByUser,
             icon: isLikedByUser ? <MdThumbUp /> : <RiThumbUpLine />,
             action: toggleLike,
           },
           {
-            text: 'Comment',
+            text: "Comment",
             icon: <BiComment />,
             action: () => {
               dispatch(
-                show({
+                showModal({
                   content: (
                     <AddCommentPrompt
                       type={type}

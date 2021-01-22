@@ -1,29 +1,29 @@
-import React, { Fragment } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppBar } from '../../app/AppBars/AppBar';
-import { BottomNav } from '../../app/AppBars/BottomNav';
-import { HelpButton } from '../../app/Buttons/HelpButton';
-import { CardDisclosureActionButtonGroup } from '../../app/Buttons/CardDisclosureActionButtonGroup';
-import { ProfilePictureButton } from '../../app/Buttons/ProfilePictureButton';
-import { MainContainer } from '../../app/Containers/MainContainer';
-import { SlideUpCSS } from '../../app/CSSTransitions/SlideUpCSS';
-import { useHistory } from 'react-router-dom';
-import { Body } from '../../app/Containers/Body';
-import styles from './ChooseFoods.module.css';
-import { DateDisplay } from './DateDisplay';
-import { format, formatDistanceToNow } from 'date-fns';
-import { numberAsCardinalWord } from '../../utils';
-import { Card } from '../../app/Containers/Card/Card';
-import { CardInfo } from '../../app/Containers/Card/CardInfo';
+import React, { Fragment } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppBar } from "../../app/AppBars/AppBar";
+import { BottomNav } from "../../app/AppBars/BottomNav";
+import { HelpButton } from "../../app/Buttons/HelpButton";
+import { CardDisclosureActionButtonGroup } from "../../app/Buttons/CardDisclosureActionButtonGroup";
+import { ProfilePictureButton } from "../../app/Buttons/ProfilePictureButton";
+import { MainContainer } from "../../app/Containers/MainContainer";
+import { SlideUpCSS } from "../../app/CSSTransitions/SlideUpCSS";
+import { useHistory } from "react-router-dom";
+import { Body } from "../../app/Containers/Body";
+import styles from "./ChooseFoods.module.css";
+import { DateDisplay } from "./DateDisplay";
+import { format, formatDistanceToNow } from "date-fns";
+import { numberAsCardinalWord } from "../../utils";
+import { Card } from "../../app/Containers/Card/Card";
+import { CardInfo } from "../../app/Containers/Card/CardInfo";
 import {
   MdCheck,
   MdFastForward,
   MdModeEdit,
   MdRemoveRedEye,
   MdReplay,
-} from 'react-icons/md';
-import { Gallery, GalleryItem } from '../../app/Containers/Gallery';
-import classnames from 'classnames';
+} from "react-icons/md";
+import { Gallery, GalleryItem } from "../../app/Containers/Gallery";
+import classnames from "classnames";
 
 import {
   placeOrderWithBallotBox,
@@ -33,10 +33,12 @@ import {
   resetBallotBox,
   // skipOrder,
   cancelSkip,
-} from '../Food/foodSlice';
-import { PackageHeading } from './Headings/PackageHeading';
-import { addRewardItemToFeed } from '../Home/feedSlice';
-import { addPoints, updateLifetimePoints } from '../Rewards/rewardsSlice';
+} from "../Food/foodSlice";
+import { PackageHeading } from "./Headings/PackageHeading";
+import { addRewardItemToFeed } from "../Home/feedSlice";
+import { addPoints, updateLifetimePoints } from "../Rewards/rewardsSlice";
+import { hideModal, showModal } from "../Modal/modalSlice";
+import { Confirm } from "../Shared/Confirm";
 
 export const ChooseFoods = () => {
   const history = useHistory();
@@ -119,27 +121,27 @@ export const ChooseFoods = () => {
     icon: <MdRemoveRedEye />,
     text: cartIsFull ? `See ${hiliCoachName}'s picks` : "See what's inside",
     action: () => {
-      history.push('/food/view-package');
+      history.push("/food/view-package");
     },
   };
 
   const editCart = {
     icon: <MdModeEdit />,
     text:
-      (cartIsEmpty && 'Customize') ||
-      (cartIsFull && 'Change your picks') ||
+      (cartIsEmpty && "Customize") ||
+      (cartIsFull && "Change your picks") ||
       (cartHasSomeItems && `Pick ${totalItems - currentCartSize} more items`),
     isHighlighted: cartHasSomeItems,
     action: () => {
-      history.push('/food/cart');
+      history.push("/food/cart");
     },
   };
 
   const vote = {
     icon: <MdModeEdit />,
-    text: 'Customize',
+    text: "Customize",
     action: () => {
-      history.push('/food/ballot-box');
+      history.push("/food/ballot-box");
     },
   };
 
@@ -162,7 +164,7 @@ export const ChooseFoods = () => {
 
   const cancelTheSkip = {
     icon: <MdReplay />,
-    text: 'Cancel Skip',
+    text: "Cancel Skip",
     hideDisclosureIcon: true,
     action: () => {
       dispatch(cancelSkip());
@@ -171,30 +173,73 @@ export const ChooseFoods = () => {
 
   const placeBallotBoxOrder = {
     icon: <MdCheck />,
-    text: 'Place order',
+    text: "Place order",
     action: () => {
-      dispatch(placeOrderWithBallotBox());
-      rewardPlacingOrder();
-      history.push('/food/order-summary');
+      dispatch(
+        showModal({
+          content: (
+            <Confirm
+              title="Just a sec"
+              bodyContent={`After you press CONTINUE to place your order, you will not be able to make any changes`}
+              confirmButtonText="CONTINUE"
+              action={() => {
+                dispatch(placeOrderWithBallotBox());
+                rewardPlacingOrder();
+                history.push("/food/order-summary");
+                dispatch(hideModal());
+              }}
+            />
+          ),
+        })
+      );
     },
   };
+
   const placePackageOrder = {
     icon: <MdCheck />,
-    text: 'Place order',
+    text: "Place order",
     action: () => {
-      dispatch(placeOrderWithPackage());
-      rewardPlacingOrder();
-      history.push('/food/order-summary');
+      dispatch(
+        showModal({
+          content: (
+            <Confirm
+              title="Just a sec"
+              bodyContent={`After you press CONTINUE to place your order, you will not be able to make any changes`}
+              confirmButtonText="CONTINUE"
+              action={() => {
+                dispatch(placeOrderWithPackage());
+                rewardPlacingOrder();
+                history.push("/food/order-summary");
+                dispatch(hideModal());
+              }}
+            />
+          ),
+        })
+      );
     },
   };
 
   const placeCartOrder = {
     icon: <MdCheck />,
-    text: 'Place order',
+    text: "Place order",
     action: () => {
-      dispatch(placeOrderWithCart());
-      rewardPlacingOrder();
-      history.push('/food/order-summary');
+      dispatch(
+        showModal({
+          content: (
+            <Confirm
+              title="Just a sec"
+              bodyContent={`After you press CONTINUE to place your order, you will not be able to make any changes`}
+              confirmButtonText="CONTINUE"
+              action={() => {
+                dispatch(placeOrderWithCart());
+                rewardPlacingOrder();
+                history.push("/food/order-summary");
+                dispatch(hideModal());
+              }}
+            />
+          ),
+        })
+      );
     },
   };
 
@@ -244,7 +289,7 @@ export const ChooseFoods = () => {
           <ProfilePictureButton
             image={useSelector((state) => state.meta.profilePic)}
             action={() => {
-              history.push('/');
+              history.push("/");
             }}
           />
         }
@@ -270,7 +315,7 @@ export const ChooseFoods = () => {
 
             {isSkippingOrder ? (
               <Card>
-                <div style={{ paddingBottom: '0.75rem' }}>
+                <div style={{ paddingBottom: "0.75rem" }}>
                   <CardInfo
                     text="Skipping this order"
                     icon={<MdFastForward />}
@@ -280,10 +325,6 @@ export const ChooseFoods = () => {
               </Card>
             ) : (
               <Card>
-                {userHasApprovedItems && (
-                  <CardInfo text="Changes Saved!" icon={<MdCheck />} />
-                )}
-
                 <PicturePreview
                   previewImages={previewImages}
                   totalItems={totalItems}
@@ -305,7 +346,7 @@ export const ChooseFoods = () => {
               </Card>
             )}
 
-            <div style={{ height: '7rem' }}></div>
+            <div style={{ height: "7rem" }}></div>
           </Body>
         </SlideUpCSS>
       </MainContainer>
@@ -341,7 +382,7 @@ const OrderStatus = ({ cartIsFull, userHasApprovedItems }) => {
   );
   const orderTime = useSelector((state) => state.food.orderTime);
   const orderDateTimeInMillis = Date.parse(
-    orderWillBePlacedOnDate + ' ' + orderTime
+    orderWillBePlacedOnDate + " " + orderTime
   );
 
   const deliveryDateInMillis = Date.parse(
@@ -356,9 +397,9 @@ const OrderStatus = ({ cartIsFull, userHasApprovedItems }) => {
           <>
             <p className="fz28 medium">Order Complete</p>
             <p>
-              Delivery on{' '}
+              Delivery on{" "}
               <span className="medium">
-                {format(deliveryDateInMillis, 'E, MMM dd')}
+                {format(deliveryDateInMillis, "E, MMM dd")}
               </span>
             </p>
           </>
@@ -373,8 +414,8 @@ const OrderStatus = ({ cartIsFull, userHasApprovedItems }) => {
             </p>
             <p className={styles.date_time}>{`${format(
               orderDateTimeInMillis,
-              'E, MMM dd'
-            )} at ${format(orderDateTimeInMillis, 'h:mm a')}`}</p>
+              "E, MMM dd"
+            )} at ${format(orderDateTimeInMillis, "h:mm a")}`}</p>
           </>
         )}
       </div>

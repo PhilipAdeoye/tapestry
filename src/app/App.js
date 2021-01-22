@@ -17,10 +17,10 @@ import { ChooseFoods } from "../features/Food/ChooseFoods";
 import { PackageView } from "../features/Food/PackageView";
 import { FoodCart } from "../features/FoodCart/FoodCart";
 import { BallotBox } from "../features/FoodVote/BallotBox";
+import { NotFound } from "../features/Shared/NotFound";
 import { OrderSummary } from "../features/Food/OrderSummary";
 import { useSelector } from "react-redux";
 import { Demo } from "./Demo";
-import { NotFound } from "./NotFound";
 
 function App() {
   const foodOrderExists = !!useSelector((state) => state.food.order);
@@ -77,12 +77,13 @@ function App() {
         <Route exact path="/giftshop/checkout">
           <Checkout />
         </Route>
-
+        <Route path="/onboarding">
+          <Karousel />
+        </Route>
         <Route exact path="/">
           {!shouldViewAppOnboarding && <Home />}
           {shouldViewAppOnboarding && <Redirect to="/onboarding/welcome" />}
         </Route>
-        <Karousel />
         <Route>
           <NotFound />
         </Route>

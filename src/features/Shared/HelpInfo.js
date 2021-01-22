@@ -1,6 +1,6 @@
-import React from 'react';
-import { SectionDivider } from './Misc/SectionDivider';
-import styles from './HelpInfo.module.css';
+import React from "react";
+import { SectionDivider } from "../../app/Misc/SectionDivider";
+import styles from "./HelpInfo.module.css";
 
 export const HelpInfo = () => {
   return (

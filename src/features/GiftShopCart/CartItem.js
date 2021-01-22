@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { IconContext } from 'react-icons/lib';
-import { MdClose, MdExpandMore } from 'react-icons/md';
-import { IconButton, iconButtonThemes } from '../../app/Buttons/IconButton';
-import styles from './CartItem.module.css';
-import iconButtonStyles from '../../app/Buttons/IconButton.module.css';
-import { getInclusiveRandomInteger } from '../../utils';
-import classnames from 'classnames';
-import { useDispatch, useSelector } from 'react-redux';
-import { show } from '../Modal/modalSlice';
-import { RemoveItemPrompt } from './RemoveItemPrompt';
-import { UpdateQuantityPrompt } from './UpdateQuantityPrompt';
+import React, { useState } from "react";
+import { IconContext } from "react-icons/lib";
+import { MdClose, MdExpandMore } from "react-icons/md";
+import { IconButton, iconButtonThemes } from "../../app/Buttons/IconButton";
+import styles from "./CartItem.module.css";
+import iconButtonStyles from "../../app/Buttons/IconButton.module.css";
+import { getInclusiveRandomInteger } from "../../utils";
+import classnames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { showModal } from "../Modal/modalSlice";
+import { RemoveItemPrompt } from "./RemoveItemPrompt";
+import { UpdateQuantityPrompt } from "./UpdateQuantityPrompt";
 
 export const CartItem = ({ name, image, price, qty, itemId }) => {
   // Use visual themes for items without an image
@@ -23,7 +23,7 @@ export const CartItem = ({ name, image, price, qty, itemId }) => {
   const handleRemoveFromCartClick = () => {
     const refund = price * qty;
     dispatch(
-      show({
+      showModal({
         content: (
           <RemoveItemPrompt name={name} itemId={itemId} refund={refund} />
         ),
@@ -39,7 +39,7 @@ export const CartItem = ({ name, image, price, qty, itemId }) => {
 
   const handleQuantityBtnClick = () => {
     dispatch(
-      show({
+      showModal({
         content: (
           <UpdateQuantityPrompt
             item={{ name, image, price, itemId }}

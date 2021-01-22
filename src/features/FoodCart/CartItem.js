@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { IconContext } from 'react-icons/lib';
-import { MdExpandMore } from 'react-icons/md';
-import styles from './CartItem.module.css';
-import iconButtonStyles from '../../app/Buttons/IconButton.module.css';
-import { getInclusiveRandomInteger } from '../../utils';
-import classnames from 'classnames';
-import { useDispatch, useSelector } from 'react-redux';
-import { show } from '../Modal/modalSlice';
-import { UpdateQuantityPrompt } from './UpdateQuantityPrompt';
+import React, { useState } from "react";
+import { IconContext } from "react-icons/lib";
+import { MdExpandMore } from "react-icons/md";
+import styles from "./CartItem.module.css";
+import iconButtonStyles from "../../app/Buttons/IconButton.module.css";
+import { getInclusiveRandomInteger } from "../../utils";
+import classnames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { showModal } from "../Modal/modalSlice";
+import { UpdateQuantityPrompt } from "./UpdateQuantityPrompt";
 
 export const CartItem = ({ name, image, qty, itemId }) => {
   // Use visual themes for items without an image
@@ -31,7 +31,7 @@ export const CartItem = ({ name, image, qty, itemId }) => {
 
   const handleQuantityBtnClick = () => {
     dispatch(
-      show({
+      showModal({
         content: (
           <UpdateQuantityPrompt
             item={{ name, image, itemId }}

@@ -1,8 +1,8 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { show } from '../../features/Modal/modalSlice';
-import { HelpInfo } from '../HelpInfo';
-import { Button, buttonType, buttonKind } from './Button';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { showModal } from "../../features/Modal/modalSlice";
+import { HelpInfo } from "../../features/Shared/HelpInfo";
+import { Button, buttonType, buttonKind } from "./Button";
 
 export const HelpButton = () => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export const HelpButton = () => {
       kind={buttonKind.default}
       type={buttonType.button}
       action={() => {
-        dispatch(show({ content: <HelpInfo /> }));
+        dispatch(showModal({ content: <HelpInfo /> }));
       }}
     />
   );

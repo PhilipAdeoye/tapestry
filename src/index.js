@@ -9,7 +9,7 @@ import store from "./app/store";
 import { Provider } from "react-redux";
 import * as serviceWorker from "./serviceWorker";
 import { HashRouter } from "react-router-dom";
-import ScrollToTop from "./app/ScrollToTop";
+import ScrollToTop from "./features/Shared/ScrollToTop";
 
 ReactDOM.render(
   <React.StrictMode>

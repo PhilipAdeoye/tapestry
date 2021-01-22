@@ -1,14 +1,14 @@
-import React from 'react';
-import styles from './OrderCompletePrompt.module.css';
-import team_cheer from '../../images/team_cheer.svg';
-import { useDispatch, useSelector } from 'react-redux';
-import { hide } from '../Modal/modalSlice';
+import React from "react";
+import styles from "./OrderCompletePrompt.module.css";
+import team_cheer from "../../images/team_cheer.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { hideModal } from "../Modal/modalSlice";
 import {
   buttonKind,
   iconPosition,
   IconTextButton,
-} from '../../app/Buttons/IconTextButton';
-import { MdChevronRight } from 'react-icons/md';
+} from "../../app/Buttons/IconTextButton";
+import { MdChevronRight } from "react-icons/md";
 
 export const OrderCompletePrompt = () => {
   const dispatch = useDispatch();
@@ -30,11 +30,11 @@ export const OrderCompletePrompt = () => {
       <div className={styles.button_section}>
         <IconTextButton
           icon={<MdChevronRight />}
-          label={'OK'}
+          label={"OK"}
           position={iconPosition.right}
           kind={buttonKind.primary}
           action={() => {
-            dispatch(hide());
+            dispatch(hideModal());
           }}
         />
       </div>

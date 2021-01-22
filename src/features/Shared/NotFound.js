@@ -1,10 +1,10 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-import { show } from '../features/Modal/modalSlice';
-import styles from './HelpInfo.module.css';
-import { SectionDivider } from './Misc/SectionDivider';
+import React from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { showModal } from "../Modal/modalSlice";
+import styles from "./HelpInfo.module.css";
+import { SectionDivider } from "../../app/Misc/SectionDivider";
 
 export const NotFound = () => {
   const dispatch = useDispatch();
@@ -23,8 +23,8 @@ export const NotFound = () => {
       </div>
     );
 
-    dispatch(show({ content: view }));
-    history.push('/');
+    dispatch(showModal({ content: view }));
+    history.push("/");
   }, [dispatch, history]);
 
   return null;

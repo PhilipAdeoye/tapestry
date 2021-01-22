@@ -1,13 +1,13 @@
-import React from 'react';
-import { MdArrowForward } from 'react-icons/md';
-import { useDispatch, useSelector } from 'react-redux';
-import { placeOrder } from '../giftShopSlice';
-import { format } from 'date-fns';
-import { emptyCart } from '../../GiftShopCart/cartSlice';
-import { show } from '../../Modal/modalSlice';
-import { OrderCompletePrompt } from '../OrderCompletePrompt';
-import { useHistory } from 'react-router-dom';
-import { OutlinedButton } from '../../../app/Buttons/OutlinedButton';
+import React from "react";
+import { MdArrowForward } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { placeOrder } from "../giftShopSlice";
+import { format } from "date-fns";
+import { emptyCart } from "../../GiftShopCart/cartSlice";
+import { showModal } from "../../Modal/modalSlice";
+import { OrderCompletePrompt } from "../OrderCompletePrompt";
+import { useHistory } from "react-router-dom";
+import { OutlinedButton } from "../../../app/Buttons/OutlinedButton";
 
 export const PlaceOrderButton = () => {
   const history = useHistory();
@@ -44,15 +44,15 @@ export const PlaceOrderButton = () => {
       placeOrder({
         items,
         isDelivered: false,
-        orderPlacedOn: format(new Date(), 'MMM d, yyyy'),
+        orderPlacedOn: format(new Date(), "MMM d, yyyy"),
         totalCost,
       })
     );
 
     dispatch(emptyCart());
-    history.push('/giftshop/order_history');
+    history.push("/giftshop/order_history");
 
-    dispatch(show({ content: <OrderCompletePrompt /> }));
+    dispatch(showModal({ content: <OrderCompletePrompt /> }));
   };
 
   return (

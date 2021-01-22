@@ -47,6 +47,7 @@
 
 .info {
   padding-left: 1rem;
+  font-size: 1.1rem;
   text-align: left;
   color: var(--grecian-blue);
   max-width: 180px;

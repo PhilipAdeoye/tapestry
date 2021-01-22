@@ -1,9 +1,9 @@
-import React from 'react';
-import classnames from 'classnames';
-import styles from './Modal.module.css';
-import { ModalCloseButton } from './ModalCloseButton';
-import { disappear, hide, visibilityStates } from './modalSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import React from "react";
+import classnames from "classnames";
+import styles from "./Modal.module.css";
+import { ModalCloseButton } from "./ModalCloseButton";
+import { disappear, hideModal, visibilityStates } from "./modalSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export const Modal = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ export const Modal = () => {
 
   const onBackdropClick = (event) => {
     if ([...event.target.classList].includes(styles.backdrop)) {
-      dispatch(hide());
+      dispatch(hideModal());
     }
   };
 
@@ -37,10 +37,10 @@ export const Modal = () => {
           [styles.content_hide]: visibility === visibilityStates.hide,
         })}
       >
-        <div className={classnames(styles.header, 'container')}>
+        <div className={classnames(styles.header, "container")}>
           <ModalCloseButton />
         </div>
-        <div className={classnames(styles.body, 'container')}>
+        <div className={classnames(styles.body, "container")}>
           {bodyContent}
         </div>
       </div>

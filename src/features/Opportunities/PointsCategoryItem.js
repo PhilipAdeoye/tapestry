@@ -1,9 +1,9 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { ProgressBar } from '../../app/Misc/ProgressBar';
-import { SectionDivider } from '../../app/Misc/SectionDivider';
-import { show } from '../Modal/modalSlice';
-import styles from './PointsCategoryItem.module.css';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { ProgressBar } from "../../app/Misc/ProgressBar";
+import { SectionDivider } from "../../app/Misc/SectionDivider";
+import { showModal } from "../Modal/modalSlice";
+import styles from "./PointsCategoryItem.module.css";
 
 export const PointsCategoryItem = ({
   image,
@@ -16,7 +16,7 @@ export const PointsCategoryItem = ({
   const dispatch = useDispatch();
   const onButtonClick = () => {
     dispatch(
-      show({
+      showModal({
         content: (
           <CategoryInfo
             title={name}

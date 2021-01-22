@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { MdChevronRight } from 'react-icons/md';
-import { useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { MdChevronRight } from "react-icons/md";
+import { useDispatch } from "react-redux";
 import {
   buttonKind,
   iconPosition,
   IconTextButton,
-} from '../../app/Buttons/IconTextButton';
-import { StackedButtons } from '../../app/Buttons/StackedButtons';
-import { createInclusiveRange } from '../../utils';
-import { updateCart } from '../Food/foodSlice';
-import { hide } from '../Modal/modalSlice';
-import styles from './UpdateQuantityPrompt.module.css';
+} from "../../app/Buttons/IconTextButton";
+import { StackedButtons } from "../../app/Buttons/StackedButtons";
+import { createInclusiveRange } from "../../utils";
+import { updateCart } from "../Food/foodSlice";
+import { hideModal } from "../Modal/modalSlice";
+import styles from "./UpdateQuantityPrompt.module.css";
 
 export const UpdateQuantityPrompt = ({ item, initialQty, maxQty }) => {
   let range = createInclusiveRange(0, maxQty);
@@ -42,7 +42,7 @@ export const UpdateQuantityPrompt = ({ item, initialQty, maxQty }) => {
       );
     }
 
-    dispatch(hide());
+    dispatch(hideModal());
   };
 
   return (
@@ -54,7 +54,7 @@ export const UpdateQuantityPrompt = ({ item, initialQty, maxQty }) => {
       <p className={styles.confirm}>
         <IconTextButton
           icon={<MdChevronRight />}
-          label={'OK'}
+          label={"OK"}
           position={iconPosition.right}
           kind={buttonKind.primary}
           action={handleConfirmBtnClick}

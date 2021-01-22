@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import classnames from 'classnames';
-import styles from './GiftShopItem.module.css';
-import { ViewItemDetailsButton } from './ViewItemDetailsButton';
-import { AddItemToCartButton } from './AddItemToCartButton';
-import { IconContext } from 'react-icons/lib';
-import { MdFavorite, MdShoppingCart } from 'react-icons/md';
-import { getInclusiveRandomInteger } from '../../utils';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../GiftShopCart/cartSlice';
-import { subtractPoints } from '../Rewards/rewardsSlice';
-import { show } from '../Modal/modalSlice';
-import { ItemDetail } from './ItemDetail';
+import classnames from "classnames";
+import styles from "./GiftShopItem.module.css";
+import { ViewItemDetailsButton } from "./ViewItemDetailsButton";
+import { AddItemToCartButton } from "./AddItemToCartButton";
+import { IconContext } from "react-icons/lib";
+import { MdFavorite, MdShoppingCart } from "react-icons/md";
+import { getInclusiveRandomInteger } from "../../utils";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../GiftShopCart/cartSlice";
+import { subtractPoints } from "../Rewards/rewardsSlice";
+import { showModal } from "../Modal/modalSlice";
+import { ItemDetail } from "./ItemDetail";
 
-export const GiftShopItem = ({ id, name, image, price, description = '' }) => {
+export const GiftShopItem = ({ id, name, image, price, description = "" }) => {
   // By default the item should hide the item controls
   const [isOpen, setIsOpen] = useState(false);
 
@@ -119,7 +119,7 @@ export const GiftShopItem = ({ id, name, image, price, description = '' }) => {
         <ViewItemDetailsButton
           action={() => {
             dispatch(
-              show({
+              showModal({
                 content: (
                   <ItemDetail
                     name={name}

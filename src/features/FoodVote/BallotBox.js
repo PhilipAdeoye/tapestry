@@ -1,29 +1,29 @@
-import React, { Fragment } from 'react';
-import { useHistory } from 'react-router-dom';
-import { AppBar } from '../../app/AppBars/AppBar';
-import { BackButton } from '../../app/Buttons/BackButton';
-import { HelpButton } from '../../app/Buttons/HelpButton';
-import { MainContainer } from '../../app/Containers/MainContainer';
-import { SlideUpCSS } from '../../app/CSSTransitions/SlideUpCSS';
-import { BigIconWithText } from '../../app/Headings/BigIconWithText';
-import clipboard from '../../images/clipboard.svg';
-import { Body } from '../../app/Containers/Body';
-import { useDispatch, useSelector } from 'react-redux';
-import BottomSheet from '../../app/Containers/BottomSheet';
+import React, { Fragment } from "react";
+import { useHistory } from "react-router-dom";
+import { AppBar } from "../../app/AppBars/AppBar";
+import { BackButton } from "../../app/Buttons/BackButton";
+import { HelpButton } from "../../app/Buttons/HelpButton";
+import { MainContainer } from "../../app/Containers/MainContainer";
+import { SlideUpCSS } from "../../app/CSSTransitions/SlideUpCSS";
+import { BigIconWithText } from "../../app/Headings/BigIconWithText";
+import clipboard from "../../images/clipboard.svg";
+import { Body } from "../../app/Containers/Body";
+import { useDispatch, useSelector } from "react-redux";
+import BottomSheet from "../../app/Containers/BottomSheet";
 import {
   columnOptions,
   Gallery,
   GalleryItem,
-} from '../../app/Containers/Gallery';
-import { Card } from '../../app/Containers/Card/Card';
-import { stuffBallotBoxWithCurrentPackage } from '../Food/foodSlice';
-import { Item } from './Item';
-import { FoodTypeHeading } from '../Food/Headings/FoodTypeHeading';
-import { StatusBar } from '../../app/AppBars/StatusBar';
-import { OutlinedButton } from '../../app/Buttons/OutlinedButton';
-import { MdArrowForward } from 'react-icons/md';
-import { show } from '../Modal/modalSlice';
-import { SelectionConfirmation } from '../Food/SelectionConfirmation';
+} from "../../app/Containers/Gallery";
+import { Card } from "../../app/Containers/Card/Card";
+import { stuffBallotBoxWithCurrentPackage } from "../Food/foodSlice";
+import { Item } from "./Item";
+import { FoodTypeHeading } from "../Food/Headings/FoodTypeHeading";
+import { StatusBar } from "../../app/AppBars/StatusBar";
+import { OutlinedButton } from "../../app/Buttons/OutlinedButton";
+import { MdArrowForward } from "react-icons/md";
+import { showModal } from "../Modal/modalSlice";
+import { SelectionConfirmation } from "../Food/SelectionConfirmation";
 
 export const BallotBox = () => {
   const history = useHistory();
@@ -57,7 +57,7 @@ export const BallotBox = () => {
   return (
     <>
       <AppBar
-        left={<BackButton action={() => history.push('/food')} />}
+        left={<BackButton action={() => history.push("/food")} />}
         right={<HelpButton />}
       />
       <MainContainer>
@@ -74,7 +74,7 @@ export const BallotBox = () => {
               {Object.keys(groupedItemsByType)
                 .sort()
                 .map((foodType, index) => (
-                  <div key={index} style={{ paddingBottom: '1rem' }}>
+                  <div key={index} style={{ paddingBottom: "1rem" }}>
                     <FoodTypeHeading
                       type={foodType}
                       count={groupedItemsByType[foodType].total}
@@ -110,18 +110,18 @@ export const BallotBox = () => {
       <StatusBar>
         <div
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            flexGrow: '1',
-            justifyContent: 'flex-end',
+            display: "flex",
+            alignItems: "center",
+            flexGrow: "1",
+            justifyContent: "flex-end",
           }}
         >
           <OutlinedButton
             text="Done"
             icon={<MdArrowForward />}
             action={() => {
-              history.push('/food');
-              dispatch(show({ content: <SelectionConfirmation /> }));
+              history.push("/food");
+              dispatch(showModal({ content: <SelectionConfirmation /> }));
             }}
           />
         </div>

@@ -1,20 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { AppBar } from '../../app/AppBars/AppBar';
-import { BottomNav } from '../../app/AppBars/BottomNav';
-import { HelpButton } from '../../app/Buttons/HelpButton';
-import { ProfilePictureButton } from '../../app/Buttons/ProfilePictureButton';
-import { MainContainer } from '../../app/Containers/MainContainer';
-import { SlideUpCSS } from '../../app/CSSTransitions/SlideUpCSS';
-import { BigIconWithText } from '../../app/Headings/BigIconWithText';
-import happiness from '../../images/happiness.svg';
-import styles from './CareTeam.module.css';
-import { RiThumbUpLine } from 'react-icons/ri';
-import { BiComment } from 'react-icons/bi';
-import { CardActionButtonGroup } from '../../app/Buttons/CardActionButtonGroup';
-import { Card, CardImage } from '../../app/Containers/Card/Card';
-import { useHistory } from 'react-router-dom';
-import { Body } from '../../app/Containers/Body';
+import React from "react";
+import { useSelector } from "react-redux";
+import { AppBar } from "../../app/AppBars/AppBar";
+import { BottomNav } from "../../app/AppBars/BottomNav";
+import { HelpButton } from "../../app/Buttons/HelpButton";
+import { ProfilePictureButton } from "../../app/Buttons/ProfilePictureButton";
+import { MainContainer } from "../../app/Containers/MainContainer";
+import { SlideUpCSS } from "../../app/CSSTransitions/SlideUpCSS";
+import { BigIconWithText } from "../../app/Headings/BigIconWithText";
+import happiness from "../../images/happiness.svg";
+import styles from "./CareTeam.module.css";
+import { Card, CardImage } from "../../app/Containers/Card/Card";
+import { useHistory } from "react-router-dom";
+import { Body } from "../../app/Containers/Body";
 
 export const CareTeam = () => {
   const history = useHistory();
@@ -27,7 +24,7 @@ export const CareTeam = () => {
           <ProfilePictureButton
             image={useSelector((state) => state.meta.profilePic)}
             action={() => {
-              history.push('/');
+              history.push("/");
             }}
           />
         }
@@ -36,7 +33,7 @@ export const CareTeam = () => {
       <MainContainer>
         <SlideUpCSS>
           <Body>
-            <div style={{ paddingLeft: '1rem' }}>
+            <div style={{ paddingLeft: "1rem" }}>
               <BigIconWithText
                 image={happiness}
                 text="Care Team"
@@ -55,7 +52,7 @@ export const CareTeam = () => {
                   />
                 ))}
               {/* The following div acts as bottom padding so that the bottom nav doesn't block off any content that may be at the bottom */}
-              <div className="col-xs-4" style={{ height: '8rem' }}></div>
+              <div className="col-xs-4" style={{ height: "8rem" }}></div>
             </div>
           </Body>
         </SlideUpCSS>
@@ -67,7 +64,7 @@ export const CareTeam = () => {
 
 const TeamMember = ({ id, image, name, role }) => {
   return (
-    <div className="col-xs-4 col-lg-4" style={{ marginBottom: '1rem' }}>
+    <div className="col-xs-4 col-lg-4" style={{ marginBottom: "1rem" }}>
       <Card>
         <div className={styles.details}>
           <CardImage src={image} alt={name} />
@@ -76,7 +73,7 @@ const TeamMember = ({ id, image, name, role }) => {
             <p className={styles.role}>{role}</p>
           </div>
         </div>
-        <CardActionButtonGroup
+        {/* <CardActionButtonGroup
           items={[
             {
               text: 'Say Hi',
@@ -87,7 +84,7 @@ const TeamMember = ({ id, image, name, role }) => {
               icon: <BiComment />,
             },
           ]}
-        />
+        /> */}
       </Card>
     </div>
   );

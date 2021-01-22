@@ -1,11 +1,11 @@
-import React from 'react';
-import styles from './RemoveItemPrompt.module.css';
-import cart_to_trash from '../../images/cart_to_trash.png';
-import { SegmentedButtons } from '../../app/Buttons/SegmentedButtons';
-import { useDispatch } from 'react-redux';
-import { hide } from '../Modal/modalSlice';
-import { removeAllWithItemId } from './cartSlice';
-import { addPoints } from '../Rewards/rewardsSlice';
+import React from "react";
+import styles from "./RemoveItemPrompt.module.css";
+import cart_to_trash from "../../images/cart_to_trash.png";
+import { SegmentedButtons } from "../../app/Buttons/SegmentedButtons";
+import { useDispatch } from "react-redux";
+import { hideModal } from "../Modal/modalSlice";
+import { removeAllWithItemId } from "./cartSlice";
+import { addPoints } from "../Rewards/rewardsSlice";
 
 export const RemoveItemPrompt = ({ name, itemId, refund }) => {
   const dispatch = useDispatch();
@@ -24,14 +24,14 @@ export const RemoveItemPrompt = ({ name, itemId, refund }) => {
         <SegmentedButtons
           items={[
             {
-              text: 'Yes',
+              text: "Yes",
               action: () => {
                 dispatch(removeAllWithItemId(itemId));
                 dispatch(addPoints(refund));
-                dispatch(hide());
+                dispatch(hideModal());
               },
             },
-            { text: 'No', action: () => dispatch(hide()) },
+            { text: "No", action: () => dispatch(hideModal()) },
           ]}
         />
       </div>

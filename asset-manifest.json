@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/tapestry/static/css/main.d3e0605d.chunk.css",
-    "main.js": "/tapestry/static/js/main.7e3783cb.chunk.js",
-    "main.js.map": "/tapestry/static/js/main.7e3783cb.chunk.js.map",
+    "main.css": "/tapestry/static/css/main.87314d33.chunk.css",
+    "main.js": "/tapestry/static/js/main.dfa8b34b.chunk.js",
+    "main.js.map": "/tapestry/static/js/main.dfa8b34b.chunk.js.map",
     "runtime-main.js": "/tapestry/static/js/runtime-main.fb8c1dab.js",
     "runtime-main.js.map": "/tapestry/static/js/runtime-main.fb8c1dab.js.map",
     "static/css/2.679831fc.chunk.css": "/tapestry/static/css/2.679831fc.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.2d9e7a96.chunk.js.map": "/tapestry/static/js/2.2d9e7a96.chunk.js.map",
     "index.html": "/tapestry/index.html",
     "static/css/2.679831fc.chunk.css.map": "/tapestry/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.d3e0605d.chunk.css.map": "/tapestry/static/css/main.d3e0605d.chunk.css.map",
+    "static/css/main.87314d33.chunk.css.map": "/tapestry/static/css/main.87314d33.chunk.css.map",
     "static/js/2.2d9e7a96.chunk.js.LICENSE.txt": "/tapestry/static/js/2.2d9e7a96.chunk.js.LICENSE.txt",
     "static/media/bell.06a1b5eb.svg": "/tapestry/static/media/bell.06a1b5eb.svg",
     "static/media/bn_activities.d985d743.svg": "/tapestry/static/media/bn_activities.d985d743.svg",
@@ -56,7 +56,7 @@
     "static/js/runtime-main.fb8c1dab.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.2d9e7a96.chunk.js",
-    "static/css/main.d3e0605d.chunk.css",
-    "static/js/main.7e3783cb.chunk.js"
+    "static/css/main.87314d33.chunk.css",
+    "static/js/main.dfa8b34b.chunk.js"
   ]
 }

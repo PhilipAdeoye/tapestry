@@ -16,16 +16,18 @@
 .image.sunburst {
   background-color: var(--sunburst-yellow);
 }
+
 .image.deep_blue {
   background-color: var(--deep-blue);
 }
+
 .image.coral {
   background-color: var(--coral);
 }
 
 .details {
   flex-grow: 1;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

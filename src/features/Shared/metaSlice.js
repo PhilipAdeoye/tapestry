@@ -5,7 +5,7 @@ const initialState = {
   userName: "Sybil",
   userId: 1000,
   hiliCoachName: "Coach Liz",
-  hiliCoachImage: "https://i.imgur.com/7ZbKZEn.jpg",
+  hiliCoachImage: "https://i.imgur.com/i7Emgxj.jpg",
   hiliCoachUserId: 2,
   shouldUseFoodCart: false,
   hasViewedAppOnboarding: false,

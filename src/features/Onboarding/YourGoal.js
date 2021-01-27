@@ -1,18 +1,18 @@
-import React from 'react';
-import styles from './YourGoal.module.css';
-import patternContainerStyles from './Containers/PatternContainer.module.css';
+import React from "react";
+import styles from "./YourGoal.module.css";
+import patternContainerStyles from "./Containers/PatternContainer.module.css";
 import {
   buttonKind,
   iconPosition,
   IconTextButton,
-} from '../../app/Buttons/IconTextButton';
-import { MdChevronRight } from 'react-icons/md';
-import { dotTheme, ProgressDots } from '../../app/Misc/ProgressDots';
+} from "../../app/Buttons/IconTextButton";
+import { MdChevronRight } from "react-icons/md";
+import { dotTheme, ProgressDots } from "../../app/Misc/ProgressDots";
 
 export const YourGoal = ({ image, name, progressDots, nextAction }) => {
   return (
     <div className={patternContainerStyles.content_container}>
-      <p className={styles.title}>Your Goal</p>
+      <p className={styles.title}>Goals</p>
       <img src={image} alt={name} className={styles.profile_pic} />
       <p className={styles.heading}>Healthy Blood Pressure</p>
       <p className={styles.info}>120 Systolic</p>

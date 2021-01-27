@@ -1,25 +1,25 @@
-import { format, isToday, isTomorrow, isYesterday } from 'date-fns';
-import React, { Fragment } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { AppBar } from '../../app/AppBars/AppBar';
-import { BottomNav } from '../../app/AppBars/BottomNav';
-import { HelpButton } from '../../app/Buttons/HelpButton';
-import { ProfilePictureButton } from '../../app/Buttons/ProfilePictureButton';
-import { Body } from '../../app/Containers/Body';
-import { MainContainer } from '../../app/Containers/MainContainer';
-import { SlideUpCSS } from '../../app/CSSTransitions/SlideUpCSS';
-import { BigIconWithText } from '../../app/Headings/BigIconWithText';
-import { Empty } from '../../app/Misc/Empty';
-import { Squinty } from '../../app/Misc/Squinty';
-import bell from '../../images/bell.svg';
-import { updateLastVisit } from './feedSlice';
-import { getRelativeDateIfClose } from '../../utils';
-import { CohortRSVPItem } from './CohortRSVPItem';
-import { feedItemType } from './feedSlice';
-import { MessageItem } from './MessageItem';
-import { RewardItem } from './RewardItem';
-import { RSVPItem } from './RSVPItem';
-import { useEffect } from 'react';
+import { format, isToday, isTomorrow, isYesterday } from "date-fns";
+import React, { Fragment } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppBar } from "../../app/AppBars/AppBar";
+import { BottomNav } from "../../app/AppBars/BottomNav";
+import { HelpButton } from "../../app/Buttons/HelpButton";
+import { ProfilePictureButton } from "../../app/Buttons/ProfilePictureButton";
+import { Body } from "../../app/Containers/Body";
+import { MainContainer } from "../../app/Containers/MainContainer";
+import { SlideUpCSS } from "../../app/CSSTransitions/SlideUpCSS";
+import { BigIconWithText } from "../../app/Headings/BigIconWithText";
+import { Empty } from "../../app/Misc/Empty";
+import { Squinty } from "../../app/Misc/Squinty";
+import bell from "../../images/bell.svg";
+import { updateLastVisit } from "./feedSlice";
+import { getRelativeDateIfClose } from "../../utils";
+import { CohortRSVPItem } from "./CohortRSVPItem";
+import { feedItemType } from "./feedSlice";
+import { MessageItem } from "./MessageItem";
+import { RewardItem } from "./RewardItem";
+import { RSVPItem } from "./RSVPItem";
+import { useEffect } from "react";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export const Home = () => {
   );
 
   const groupByStartDate = (acc, item) => {
-    let date = '';
+    let date = "";
     if (
       isYesterday(Date.parse(item.createdAt)) ||
       isToday(Date.parse(item.createdAt)) ||
@@ -40,7 +40,7 @@ export const Home = () => {
     ) {
       date = getRelativeDateIfClose(Date.parse(item.createdAt));
     } else {
-      date = format(Date.parse(item.createdAt), 'EEEE, MMM d');
+      date = format(Date.parse(item.createdAt), "EEEE, MMM d");
     }
     if (!acc[date]) {
       acc[date] = [];
@@ -94,7 +94,7 @@ export const Home = () => {
                   <Fragment key={key}>
                     <p
                       className="rubik medium"
-                      style={{ paddingBottom: '1rem' }}
+                      style={{ paddingBottom: "1rem" }}
                     >
                       {key}
                     </p>
@@ -108,9 +108,9 @@ export const Home = () => {
                     <p
                       className="rubik medium"
                       style={{
-                        paddingBottom: '1rem',
+                        paddingBottom: "1rem",
                         paddingTop:
-                          Object.keys(newStuff).length > 0 ? '1.5rem' : '0',
+                          Object.keys(newStuff).length > 0 ? "1.5rem" : "0",
                       }}
                     >
                       {key}
@@ -138,10 +138,10 @@ const FeedTerminator = () => {
   return (
     <div
       style={{
-        paddingTop: '4rem',
-        paddingBottom: '7rem',
-        display: 'flex',
-        justifyContent: 'center',
+        paddingTop: "4rem",
+        paddingBottom: "9rem",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Squinty message="All caught up!" />
@@ -160,5 +160,5 @@ const FeedItem = ({ stuff }) => {
   } else if (stuff.type === feedItemType.message) {
     item = <MessageItem {...stuff} />;
   }
-  return <div style={{ paddingBottom: '1rem' }}>{item}</div>;
+  return <div style={{ paddingBottom: "1rem" }}>{item}</div>;
 };

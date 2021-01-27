@@ -14,7 +14,7 @@
   transition: height 250ms;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   font-family: 'Rubik';
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: var(--warm-white);
 }
@@ -67,11 +67,7 @@
 
 .backdrop {
   border-radius: 0 0 1rem 1rem;
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.95),
-    rgba(255, 255, 255, 0)
-  );
+  background-image: linear-gradient( to top, rgba(0, 0, 0, 0.95), rgba(255, 255, 255, 0));
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -79,10 +75,7 @@
   padding: 0.75rem;
 }
 
-.item.plaster .backdrop,
-.item.sunburst .backdrop,
-.item.deep_blue .backdrop,
-.item.coral .backdrop {
+.item.plaster .backdrop, .item.sunburst .backdrop, .item.deep_blue .backdrop, .item.coral .backdrop {
   background-image: none;
 }
 
@@ -109,6 +102,7 @@
   background-color: var(--grecian-blue);
   color: var(--warm-white);
 }
+
 .item.deep_blue .price {
   background-color: var(--sunburst-yellow);
 }

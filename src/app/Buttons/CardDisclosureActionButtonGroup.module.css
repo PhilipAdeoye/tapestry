@@ -6,7 +6,7 @@
 
 .button {
   flex-grow: 1;
-  height: 3rem;
+  height: 3.5rem;
   background-color: var(--warm-white);
   border: none;
   color: var(--deep-blue);

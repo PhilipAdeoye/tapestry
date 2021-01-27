@@ -35,7 +35,6 @@
 .points_reward_text {
   margin: 0;
   color: var(--coral);
-  font-size: 1rem;
   font-family: 'Rubik';
   font-weight: 500;
 }
@@ -43,7 +42,7 @@
 .info {
   font-weight: 400;
   color: var(--grecian-blue);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
   max-width: 300px;
   text-align: center;

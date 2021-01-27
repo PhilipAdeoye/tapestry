@@ -9,7 +9,7 @@
     background-color: var(--plaster);
     border-radius: 1rem;
     padding: 0.5rem;
-    height: 8rem;
+    height: 9rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -51,9 +51,9 @@
 }
 
 .text {
-    padding-top: 0.65rem;
+    padding-top: 1rem;
     text-align: center;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     color: var(--deep-blue);
 }
 

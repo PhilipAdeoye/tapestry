@@ -25,7 +25,7 @@
   border: none;
   color: var(--plaster);
   font-family: 'Rubik';
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   flex-grow: 1;
   /* Assume 5 items */

@@ -269,7 +269,7 @@ export const Karousel = () => {
                     {...routeProps}
                     image={hiliCoachImage}
                     imgAlt={`Your HILI coach - ${hiliCoachName}`}
-                    text={`Keep in touch with ${hiliCoachName}, your HILI coach`}
+                    text={`Keep in touch with ${hiliCoachName}`}
                     progressDots={
                       <ProgressDots
                         current={4}
@@ -402,7 +402,7 @@ export const Karousel = () => {
                   title="Earn Points"
                   image={fitness_trainer}
                   imgAlt="Fitness trainer coaching student"
-                  text="by completing coach-led fitness activities"
+                  text="by completing coach-led activities"
                   pointsReward="50"
                   progressDots={
                     <ProgressDots
@@ -462,7 +462,7 @@ export const Karousel = () => {
                   title="Earn Points"
                   image={team_cheer}
                   imgAlt="Happy emoji cheering"
-                  text="Cheering on your teammates"
+                  text="Cheering your classmates"
                   pointsReward="50"
                   progressDots={
                     <ProgressDots

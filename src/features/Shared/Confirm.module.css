@@ -13,14 +13,13 @@
 }
 
 .lead {
-    padding-top: 2rem;
-    font-size: 1.1rem;
+    padding-top: 2.5rem;
 }
 
 .button_section {
     width: 100%;
     text-align: right;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
 }
 
 @media (max-width: 360px) {

@@ -13,7 +13,7 @@
   margin-left: 1rem;
   padding: 0 0.5rem;
   background-color: var(--plaster);
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   border-radius: 0.5rem;
 }
 
@@ -21,15 +21,12 @@
   padding: 0.5rem 0;
 }
 
-.order_wrapper {
-  /* padding: 1rem 0; */
-}
-
 .total_wrapper {
   padding: 0 0 1rem 6rem;
   flex-basis: 100%;
   margin-bottom: 2rem;
 }
+
 .total_details {
   border-top: 1px solid var(--coral);
   border-bottom: 1px solid var(--coral);

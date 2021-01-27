@@ -1,8 +1,8 @@
 .button {
     border: none;
     width: 100%;
-    height: 12rem;
-    padding: 0.75rem;
+    height: 13rem;
+    padding: 1rem;
     background-color: var(--warm-white);
     box-shadow: 0 3px 6px 0 var(--coral-shadow);
     border-radius: 1rem;
@@ -15,20 +15,20 @@
 .image {
     width: 3.5rem;
     position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
+    top: 1rem;
+    right: 1rem;
 }
 
 .name {
     font-weight: 500;
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .content {
     position: absolute;
-    bottom: 0.75rem;
-    width: calc(100% - 1.5rem);
+    bottom: 1rem;
+    width: calc(100% - 2rem);
 }
 
 /* Start Stuff in modal */
@@ -44,12 +44,11 @@
     font-family: 'Rubik';
     font-size: 1.75rem;
     padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     font-weight: 500;
 }
 
 .description {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
-    font-size: 1rem;
 }

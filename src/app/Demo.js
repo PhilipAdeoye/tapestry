@@ -1,16 +1,11 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   addCohortRSVPItemToFeed,
   addComment,
   addMessageToFeed,
-  addRewardItemToFeed,
   toggleCohortItemLike,
-} from '../features/Home/feedSlice';
-import {
-  addPoints,
-  updateLifetimePoints,
-} from '../features/Rewards/rewardsSlice';
+} from "../features/Home/feedSlice";
 
 export const Demo = () => {
   const dispatch = useDispatch();
@@ -24,17 +19,17 @@ export const Demo = () => {
   //   Stuff that happens when component is mounted
   useEffect(() => {
     const marilyn = {
-      image: 'https://i.imgur.com/uekoCCt.jpg',
-      name: 'Marilyn',
+      image: "https://i.imgur.com/uekoCCt.jpg",
+      name: "Marilyn",
     };
     const sebastian = {
-      image: 'https://i.imgur.com/m3dPTep.jpg',
-      name: 'Chef Sebastian',
+      image: "https://i.imgur.com/m3dPTep.jpg",
+      name: "Chef Sebastian",
       id: 1,
     };
     const amelia = {
-      image: 'https://i.imgur.com/qjyZyL6.jpg',
-      name: 'Coach Amelia',
+      image: "https://i.imgur.com/qjyZyL6.jpg",
+      name: "Coach Amelia",
       id: 2,
     };
 
@@ -71,7 +66,7 @@ export const Demo = () => {
           userId: sebastian.id,
           userName: sebastian.name,
           imageURL: sebastian.image,
-          text: 'Awesome! Looking forward to seeing you',
+          text: "Awesome! Looking forward to seeing you",
         })
       );
     }, 48000);
@@ -95,7 +90,7 @@ export const Demo = () => {
           userId: amelia.id,
           userName: amelia.name,
           imageURL: amelia.image,
-          text: 'Yay!',
+          text: "Yay!",
         })
       );
     }, 53000);
@@ -111,16 +106,16 @@ export const Demo = () => {
       );
     }, 56000);
 
-    const addSpendingPointsTimer = setTimeout(() => {
-      dispatch(addPoints(19995));
-      dispatch(updateLifetimePoints(19995));
-      dispatch(
-        addRewardItemToFeed({
-          points: '20K',
-          message: `Here's some starting capital to hit up the Gift Shop with. Also, don't end sentences with prepositions`,
-        })
-      );
-    }, 90000);
+    // const addSpendingPointsTimer = setTimeout(() => {
+    //   dispatch(addPoints(19995));
+    //   dispatch(updateLifetimePoints(19995));
+    //   dispatch(
+    //     addRewardItemToFeed({
+    //       points: '20K',
+    //       message: `Here's some starting capital to hit up the Gift Shop with. Also, don't end sentences with prepositions`,
+    //     })
+    //   );
+    // }, 90000);
 
     // Stuff that happens when unmounting
     return () => {
@@ -130,7 +125,7 @@ export const Demo = () => {
       clearTimeout(addSebastianLikeTimer);
       clearTimeout(addAmeliaCommentTimer);
       clearTimeout(addAmeliaLikeTimer);
-      clearTimeout(addSpendingPointsTimer);
+      // clearTimeout(addSpendingPointsTimer);
     };
   }, [dispatch, hiliCoach.name, hiliCoach.image, hiliCoach.userId]);
 

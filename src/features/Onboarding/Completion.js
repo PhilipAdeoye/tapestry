@@ -1,15 +1,15 @@
-import React from 'react';
-import { MdChevronRight } from 'react-icons/md';
+import React from "react";
+import { MdChevronRight } from "react-icons/md";
 import {
   buttonKind,
   iconPosition,
   IconTextButton,
-} from '../../app/Buttons/IconTextButton';
-import storefront from '../../images/storefront.svg';
+} from "../../app/Buttons/IconTextButton";
+import storefront from "../../images/storefront.svg";
 
-import styles from './Completion.module.css';
-import plainContainerStyles from './Containers/PlainContainer.module.css';
-import { Sunburst } from '../../app/Misc/Sunburst';
+import styles from "./Completion.module.css";
+import plainContainerStyles from "./Containers/PlainContainer.module.css";
+import { Sunburst } from "../../app/Misc/Sunburst";
 
 export const Completion = ({ points, nextAction }) => {
   return (
@@ -35,9 +35,7 @@ export const Completion = ({ points, nextAction }) => {
               alt="Storefront"
             />
           </div>
-          <p className={styles.info}>
-            You can spend your points on goodies in the gift shop later
-          </p>
+          <p className={styles.info}>Spend points in the Gift Shop</p>
         </div>
       </div>
 

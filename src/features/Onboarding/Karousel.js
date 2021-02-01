@@ -39,7 +39,7 @@ export const Karousel = () => {
 
   const dispatch = useDispatch();
 
-  const completionRewardPoints = 50;
+  const completionRewardPoints = 20000;
 
   // Backdrops
   const [rhombusBgIsVisible, setRhombusBgIsVisible] = useState(true);
@@ -585,7 +585,7 @@ export const Karousel = () => {
               >
                 <Completion
                   {...routeProps}
-                  points={completionRewardPoints}
+                  points="20K"
                   nextAction={() => {
                     setCompletionIsVisible(false);
                     setPlainBgIsVisible(false);
@@ -594,12 +594,12 @@ export const Karousel = () => {
                         routeProps.history.push("/");
                         dispatch(
                           addRewardItemToFeed({
-                            points: completionRewardPoints,
-                            message: `You earned ${completionRewardPoints} points for getting started`,
+                            points: "20K",
+                            message: `You earned 20,000 points for getting started`,
                           })
                         );
-                        dispatch(addPoints(50));
-                        dispatch(updateLifetimePoints(50));
+                        dispatch(addPoints(completionRewardPoints));
+                        dispatch(updateLifetimePoints(completionRewardPoints));
                         setCompletionIsVisible(true);
                       },
                     ]);

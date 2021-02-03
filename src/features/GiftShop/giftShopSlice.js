@@ -39,6 +39,12 @@ const initialState = {
       price: 5000,
     },
     {
+      id: 51,
+      name: "In-store shopping with Coach Liz",
+      description: "",
+      price: 10000,
+    },
+    {
       id: 60,
       name: "Minimalism Makeover with Mari Kondo",
       description: "A diminutive Japanese woman puts your house in order",

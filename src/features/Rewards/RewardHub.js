@@ -47,15 +47,15 @@ export const RewardHub = () => {
             <div className={styles.points_display}>
               <p className={styles.lead}>Points to Spend</p>
               <div className={styles.points_to_spend}>
-                <p>{pointsToSpend}</p>
+                <p>{pointsToSpend.toLocaleString()}</p>
               </div>
               <p className={styles.lifetime_points}>
-                Lifetime Points: <span>{lifetimePoints}</span>
+                Lifetime Points: <span>{lifetimePoints.toLocaleString()}</span>
               </p>
             </div>
             <div className={classnames("row", styles.menu_wrapper)}>
               <div
-                className={classnames("col-xs-4", "col-lg-4", styles.menu_item)}
+                className={classnames("col-xs-4", "col-lg-8", styles.menu_item)}
               >
                 <ImageButton
                   img={storefront}
@@ -65,7 +65,7 @@ export const RewardHub = () => {
                   action={() => history.push("/giftshop")}
                 />
               </div>
-              <div
+              {/* <div
                 className={classnames("col-xs-4", "col-lg-4", styles.menu_item)}
               >
                 <ImageButton
@@ -75,7 +75,7 @@ export const RewardHub = () => {
                   subtitle="Earn more points"
                   action={() => history.push("/opportunities")}
                 />
-              </div>
+              </div> */}
               {/* The following div acts as bottom padding so that the bottom nav doesn't block off any content that may be at the bottom */}
               <div className="col-xs-4" style={{ height: "8rem" }}></div>
             </div>

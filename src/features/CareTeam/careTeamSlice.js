@@ -1,33 +1,39 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 // Slice of state and reducers
 const careTeamSlice = createSlice({
-  name: 'careTeam',
+  name: "careTeam",
   initialState: {
     teamMembers: [
       {
-        id: '1',
-        name: 'Coach Amelia',
-        role: 'Workout Coach',
-        image: 'https://i.imgur.com/qjyZyL6.jpg',
+        id: "1",
+        name: "Coach Liz",
+        role: "HILI Coach",
+        image: "https://i.imgur.com/i7Emgxj.jpg",
       },
       {
-        id: '2',
-        name: 'Doctor Ravi',
-        role: 'Primary Care',
-        image: 'https://i.imgur.com/xtAIENh.jpg',
+        id: "11",
+        name: "Coach Amelia",
+        role: "Workout Coach",
+        image: "https://i.imgur.com/qjyZyL6.jpg",
       },
       {
-        id: '3',
-        name: 'Chef Sebastian',
-        role: 'Chef',
-        image: 'https://i.imgur.com/m3dPTep.jpg',
+        id: "20",
+        name: "Doctor Ravi",
+        role: "Primary Care",
+        image: "https://i.imgur.com/xtAIENh.jpg",
       },
       {
-        id: '4',
-        name: 'RD Gertrude',
-        role: 'Registered Dietician',
-        image: 'https://i.imgur.com/QPRsusb.jpg',
+        id: "30",
+        name: "Chef Sebastian",
+        role: "Chef",
+        image: "https://i.imgur.com/m3dPTep.jpg",
+      },
+      {
+        id: "40",
+        name: "RD Gertrude",
+        role: "Registered Dietician",
+        image: "https://i.imgur.com/QPRsusb.jpg",
       },
     ],
   },

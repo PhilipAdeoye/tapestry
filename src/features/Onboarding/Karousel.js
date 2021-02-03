@@ -336,7 +336,7 @@ export const Karousel = () => {
                     title="Earn Points"
                     image={frying_pan}
                     imgAlt="Frying pan with veggies and meat"
-                    text="by completing cooking class activities"
+                    text="from cooking class"
                     pointsReward="50"
                     progressDots={
                       <ProgressDots
@@ -402,7 +402,7 @@ export const Karousel = () => {
                   title="Earn Points"
                   image={fitness_trainer}
                   imgAlt="Fitness trainer coaching student"
-                  text="by completing coach-led activities"
+                  text="from coach-led activities"
                   pointsReward="50"
                   progressDots={
                     <ProgressDots

@@ -111,7 +111,7 @@ export const Demo = () => {
     //   dispatch(updateLifetimePoints(19995));
     //   dispatch(
     //     addRewardItemToFeed({
-    //       points: '20K',
+    //       points: '20,000',
     //       message: `Here's some starting capital to hit up the Gift Shop with. Also, don't end sentences with prepositions`,
     //     })
     //   );

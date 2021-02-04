@@ -1,25 +1,25 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { AppBar } from '../../app/AppBars/AppBar';
-import { BackButton } from '../../app/Buttons/BackButton';
-import { HelpButton } from '../../app/Buttons/HelpButton';
-import { MainContainer } from '../../app/Containers/MainContainer';
-import { SlideUpCSS } from '../../app/CSSTransitions/SlideUpCSS';
-import { BigIconWithText } from '../../app/Headings/BigIconWithText';
-import { StatusBarControls } from './StatusBar/StatusBarControls';
-import cash_register from '../../images/cash_register.svg';
-import { Body } from '../../app/Containers/Body';
-import { useSelector } from 'react-redux';
-import BottomSheet from '../../app/Containers/BottomSheet';
-import { Empty } from '../../app/Misc/Empty';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { AppBar } from "../../app/AppBars/AppBar";
+import { BackButton } from "../../app/Buttons/BackButton";
+import { HelpButton } from "../../app/Buttons/HelpButton";
+import { MainContainer } from "../../app/Containers/MainContainer";
+import { SlideUpCSS } from "../../app/CSSTransitions/SlideUpCSS";
+import { BigIconWithText } from "../../app/Headings/BigIconWithText";
+import { StatusBarControls } from "./StatusBar/StatusBarControls";
+import cash_register from "../../images/cash_register.svg";
+import { Body } from "../../app/Containers/Body";
+import { useSelector } from "react-redux";
+import BottomSheet from "../../app/Containers/BottomSheet";
+import { Empty } from "../../app/Misc/Empty";
 import {
   columnOptions,
   Gallery,
   GalleryItem,
-} from '../../app/Containers/Gallery';
-import { SummaryItem } from './SummaryItem';
-import styles from './Checkout.module.css';
-import { StatusBar } from '../../app/AppBars/StatusBar';
+} from "../../app/Containers/Gallery";
+import { SummaryItem } from "./SummaryItem";
+import styles from "./Checkout.module.css";
+import { StatusBar } from "../../app/AppBars/StatusBar";
 
 export const Checkout = () => {
   const history = useHistory();
@@ -43,7 +43,7 @@ export const Checkout = () => {
   return (
     <>
       <AppBar
-        left={<BackButton action={() => history.push('/giftshop')} />}
+        left={<BackButton action={() => history.push("/giftshop")} />}
         right={<HelpButton />}
       />
       <MainContainer>
@@ -92,7 +92,7 @@ const CheckoutTotal = ({ amount }) => {
     <div className={styles.total_wrapper}>
       <div className={styles.total_details}>
         <span>Total Cost</span>
-        <span className={styles.total}>{amount}</span>
+        <span className={styles.total}>{amount.toLocaleString()}</span>
       </div>
     </div>
   );

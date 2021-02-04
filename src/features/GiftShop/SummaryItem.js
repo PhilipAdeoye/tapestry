@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import styles from './SummaryItem.module.css';
-import classnames from 'classnames';
-import { getInclusiveRandomInteger } from '../../utils';
+import React, { useState } from "react";
+import styles from "./SummaryItem.module.css";
+import classnames from "classnames";
+import { getInclusiveRandomInteger } from "../../utils";
 
 export const SummaryItem = ({ id, name, image, qty, cost }) => {
   // Use visual themes for items without an image
@@ -23,7 +23,7 @@ export const SummaryItem = ({ id, name, image, qty, cost }) => {
         <span>{name}</span>
         <div className={styles.meta}>
           <span>x{qty}</span>
-          <span className={styles.item_total}>{cost}</span>
+          <span className={styles.item_total}>{cost.toLocaleString()}</span>
         </div>
       </div>
     </div>

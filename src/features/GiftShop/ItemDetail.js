@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './ItemDetail.module.css';
-import classnames from 'classnames';
-import { useDispatch, useSelector } from 'react-redux';
-import { DisclosureButtonGroup } from '../../app/Buttons/DisclosureButtonGroup';
-import { MdFavorite, MdFavoriteBorder } from 'react-icons/md';
-import { addToWishlist, removeFromWishlistWithItemId } from './wishlistSlice';
+import React from "react";
+import styles from "./ItemDetail.module.css";
+import classnames from "classnames";
+import { useDispatch, useSelector } from "react-redux";
+import { DisclosureButtonGroup } from "../../app/Buttons/DisclosureButtonGroup";
+import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
+import { addToWishlist, removeFromWishlistWithItemId } from "./wishlistSlice";
 
 export const ItemDetail = ({ name, image, price, itemId }) => {
   const qtyInCart = useSelector(
@@ -18,20 +18,20 @@ export const ItemDetail = ({ name, image, price, itemId }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className={classnames(styles.container, 'row')}>
+    <div className={classnames(styles.container, "row")}>
       {image && (
         <div className="col-xs-4 col-lg-4">
           <img
             src={image}
             alt={name}
-            className={classnames(styles.image, 'img-responsive')}
+            className={classnames(styles.image, "img-responsive")}
           />
         </div>
       )}
       <div className="col-xs-4 col-lg-4">
         <p className={styles.name}>{name}</p>
         <p>
-          <span className={styles.price}>{price}</span>
+          <span className={styles.price}>{price.toLocaleString()}</span>
           {qtyInCart > 0 && (
             <span className={styles.qty_in_cart}>{qtyInCart} in your cart</span>
           )}
@@ -40,7 +40,7 @@ export const ItemDetail = ({ name, image, price, itemId }) => {
           <DisclosureButtonGroup
             items={[
               {
-                text: isInWishlist ? 'Remove from Wishlist' : 'Put in Wishlist',
+                text: isInWishlist ? "Remove from Wishlist" : "Put in Wishlist",
                 icon: isInWishlist ? <MdFavorite /> : <MdFavoriteBorder />,
                 useCoralIcon: isInWishlist,
                 hideDisclosureIcon: true,

@@ -1,19 +1,19 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { AppBar } from '../../app/AppBars/AppBar';
-import { BackButton } from '../../app/Buttons/BackButton';
-import { HelpButton } from '../../app/Buttons/HelpButton';
-import { MainContainer } from '../../app/Containers/MainContainer';
-import { SlideUpCSS } from '../../app/CSSTransitions/SlideUpCSS';
-import { BigIconWithText } from '../../app/Headings/BigIconWithText';
-import processing from '../../images/processing.svg';
-import { Body } from '../../app/Containers/Body';
-import { Empty } from '../../app/Misc/Empty';
-import { useSelector } from 'react-redux';
-import BottomSheet from '../../app/Containers/BottomSheet';
-import styles from './OrderHistory.module.css';
-import { MinorHeading } from '../../app/Headings/MinorHeading';
-import { SummaryItem } from './SummaryItem';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { AppBar } from "../../app/AppBars/AppBar";
+import { BackButton } from "../../app/Buttons/BackButton";
+import { HelpButton } from "../../app/Buttons/HelpButton";
+import { MainContainer } from "../../app/Containers/MainContainer";
+import { SlideUpCSS } from "../../app/CSSTransitions/SlideUpCSS";
+import { BigIconWithText } from "../../app/Headings/BigIconWithText";
+import processing from "../../images/processing.svg";
+import { Body } from "../../app/Containers/Body";
+import { Empty } from "../../app/Misc/Empty";
+import { useSelector } from "react-redux";
+import BottomSheet from "../../app/Containers/BottomSheet";
+import styles from "./OrderHistory.module.css";
+import { MinorHeading } from "../../app/Headings/MinorHeading";
+import { SummaryItem } from "./SummaryItem";
 
 export const OrderHistory = () => {
   const history = useHistory();
@@ -23,7 +23,7 @@ export const OrderHistory = () => {
   return (
     <>
       <AppBar
-        left={<BackButton action={() => history.push('/giftshop')} />}
+        left={<BackButton action={() => history.push("/giftshop")} />}
         right={<HelpButton />}
       />
       <MainContainer>
@@ -70,7 +70,7 @@ export const OrderHistory = () => {
                         <div className={styles.total_details}>
                           <span>Total Cost</span>
                           <span className={styles.total}>
-                            {order.totalCost}
+                            {order.totalCost.toLocaleString()}
                           </span>
                         </div>
                       </div>

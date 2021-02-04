@@ -24,4 +24,4 @@ yarn-error.log*
 
 # editor files
 # /.vscode
-prettier.config.js
+# prettier.config.js

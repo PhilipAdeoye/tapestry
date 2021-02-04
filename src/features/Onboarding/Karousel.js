@@ -585,7 +585,7 @@ export const Karousel = () => {
               >
                 <Completion
                   {...routeProps}
-                  points="20K"
+                  points="20,000"
                   nextAction={() => {
                     setCompletionIsVisible(false);
                     setPlainBgIsVisible(false);
@@ -594,7 +594,7 @@ export const Karousel = () => {
                         routeProps.history.push("/");
                         dispatch(
                           addRewardItemToFeed({
-                            points: "20K",
+                            points: "20,000",
                             message: `You earned 20,000 points for getting started`,
                           })
                         );

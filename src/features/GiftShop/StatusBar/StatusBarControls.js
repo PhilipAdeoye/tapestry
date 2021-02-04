@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './StatusBarControls.module.css';
-import { useHistory, useLocation } from 'react-router-dom';
-import { PlaceOrderButton } from './PlaceOrderButton';
-import { ProfilePic } from './ProfilePic';
-import { useSelector } from 'react-redux';
-import { IconButton, iconButtonThemes } from '../../../app/Buttons/IconButton';
-import { MdArrowForward, MdShoppingCart } from 'react-icons/md';
-import { OutlinedButton } from '../../../app/Buttons/OutlinedButton';
+import React from "react";
+import styles from "./StatusBarControls.module.css";
+import { useHistory, useLocation } from "react-router-dom";
+import { PlaceOrderButton } from "./PlaceOrderButton";
+import { ProfilePic } from "./ProfilePic";
+import { useSelector } from "react-redux";
+import { IconButton, iconButtonThemes } from "../../../app/Buttons/IconButton";
+import { MdArrowForward, MdShoppingCart } from "react-icons/md";
+import { OutlinedButton } from "../../../app/Buttons/OutlinedButton";
 
 export const StatusBarControls = () => {
   const location = useLocation();
@@ -24,7 +24,7 @@ export const StatusBarControls = () => {
   );
 
   // If on the checkout page
-  const readyToCheckout = location.pathname.indexOf('checkout') > -1;
+  const readyToCheckout = location.pathname.indexOf("checkout") > -1;
 
   return (
     <div className={styles.container}>
@@ -32,7 +32,7 @@ export const StatusBarControls = () => {
       <div className={styles.cash_area}>
         <ProfilePic />
         <div className={styles.points_area}>
-          <p className={styles.points}>{points}</p>
+          <p className={styles.points}>{points.toLocaleString()}</p>
           <p className={styles.unit}>Points</p>
         </div>
       </div>
@@ -49,13 +49,13 @@ export const StatusBarControls = () => {
               title="View Cart"
               icon={<MdShoppingCart />}
               theme={iconButtonThemes.plaster}
-              action={() => history.push('/giftshop/cart')}
+              action={() => history.push("/giftshop/cart")}
             />
             <div className={styles.points_area}>
-              <p className={styles.points}>{pointsSpent}</p>
+              <p className={styles.points}>{pointsSpent.toLocaleString()}</p>
               <p className={styles.unit}>
                 <span>{itemsInCart}</span>
-                {itemsInCart === 1 ? ' item' : ' items'}
+                {itemsInCart === 1 ? " item" : " items"}
               </p>
             </div>
           </div>
@@ -65,7 +65,7 @@ export const StatusBarControls = () => {
             <OutlinedButton
               text="Checkout"
               icon={<MdArrowForward />}
-              action={() => history.push('/giftshop/checkout')}
+              action={() => history.push("/giftshop/checkout")}
               shrinkOnSmallScreens={true}
               hideTextOnSmallScreens={true}
             />

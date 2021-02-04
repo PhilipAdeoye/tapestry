@@ -70,7 +70,7 @@ export const GiftShopItem = ({ id, name, image, price, description = "" }) => {
         <div className={styles.backdrop}>
           <p>{name}</p>
           <div className={styles.details}>
-            <span className={styles.price}>{price}</span>
+            <span className={styles.price}>{price.toLocaleString()}</span>
 
             {/* If any of this item is in the user's cart */}
             {qtyInCart > 0 && (

@@ -3,7 +3,7 @@ import styles from './SummaryItem.module.css';
 import classnames from 'classnames';
 import { getInclusiveRandomInteger } from '../../utils';
 
-export const SummaryItem = ({ id, name, image, qty, cost = 0 }) => {
+export const SummaryItem = ({ id, name, image, qty, cost }) => {
   // Use visual themes for items without an image
   const useThemes = !Boolean(image);
   const themes = [styles.sunburst, styles.deep_blue, styles.coral];
@@ -23,7 +23,9 @@ export const SummaryItem = ({ id, name, image, qty, cost = 0 }) => {
         <span>{name}</span>
         <div className={styles.meta}>
           <span>x{qty}</span>
-          <span className={styles.item_total}>{cost.toLocaleString()}</span>
+          {!!cost && (
+            <span className={styles.item_total}>{cost.toLocaleString()}</span>
+          )}
         </div>
       </div>
     </div>

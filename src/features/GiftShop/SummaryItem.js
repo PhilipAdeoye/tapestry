@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import styles from "./SummaryItem.module.css";
-import classnames from "classnames";
-import { getInclusiveRandomInteger } from "../../utils";
+import React, { useState } from 'react';
+import styles from './SummaryItem.module.css';
+import classnames from 'classnames';
+import { getInclusiveRandomInteger } from '../../utils';
 
-export const SummaryItem = ({ id, name, image, qty, cost }) => {
+export const SummaryItem = ({ id, name, image, qty, cost = 0 }) => {
   // Use visual themes for items without an image
   const useThemes = !Boolean(image);
   const themes = [styles.sunburst, styles.deep_blue, styles.coral];
